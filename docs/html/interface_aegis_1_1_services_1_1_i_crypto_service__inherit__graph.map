@@ -1,0 +1,5 @@
+<map id="Aegis.Services.ICryptoService" name="Aegis.Services.ICryptoService">
+<area shape="rect" id="Node000001" title="Defines the contract for cryptographic operations." alt="" coords="5,5,195,160"/>
+<area shape="rect" id="Node000002" href="$class_aegis_1_1_services_1_1_crypto_service.html" title="Provides cryptographic services for hashing, encryption, and decryption." alt="" coords="7,208,193,363"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,175,103,208,98,208,98,175"/>
+</map>

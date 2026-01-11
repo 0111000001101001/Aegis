@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespace_aegis_1_1_u_i" kind="namespace" language="C#">
+    <compoundname>Aegis::UI</compoundname>
+    <innerclass refid="class_aegis_1_1_u_i_1_1_console_u_i" prot="public">Aegis::UI::ConsoleUI</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Aegis/UI/ConsoleUI.cs" line="3" column="1"/>
+  </compounddef>
+</doxygen>

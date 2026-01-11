@@ -1,0 +1,9 @@
+@startuml
+interface ICryptoService {
+    HashMasterPassword(password:string, salt:byte[]) : string
+    VerifyMasterPassword(password:string, hash:string, salt:byte[]) : bool
+    DeriveKeyFromPassword(password:string, salt:byte[]) : byte[]
+    Encrypt(plainText:string, key:byte[]) : string
+    Decrypt(cipherText:string, key:byte[]) : string
+}
+@enduml

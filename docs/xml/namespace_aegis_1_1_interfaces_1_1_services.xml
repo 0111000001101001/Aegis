@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespace_aegis_1_1_interfaces_1_1_services" kind="namespace" language="C#">
+    <compoundname>Aegis::Interfaces::Services</compoundname>
+    <innerclass refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_credential_service" prot="public">Aegis::Interfaces::Services::ICredentialService</innerclass>
+    <innerclass refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service" prot="public">Aegis::Interfaces::Services::ICryptoService</innerclass>
+    <innerclass refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service" prot="public">Aegis::Interfaces::Services::IDatabaseService</innerclass>
+    <innerclass refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_user_service" prot="public">Aegis::Interfaces::Services::IUserService</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Aegis/Interfaces/Services/ICredentialService.cs" line="1" column="1"/>
+  </compounddef>
+</doxygen>

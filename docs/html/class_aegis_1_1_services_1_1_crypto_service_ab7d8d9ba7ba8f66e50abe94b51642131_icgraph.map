@@ -1,0 +1,5 @@
+<map id="Aegis.Services.CryptoService.HashMasterPassword" name="Aegis.Services.CryptoService.HashMasterPassword">
+<area shape="rect" id="Node000001" title="Hashes a master password using PBKDF2 with a randomly generated salt.A Base64 encoded string represen..." alt="" coords="254,5,454,48"/>
+<area shape="rect" id="Node000002" href="$class_aegis_1_1_services_1_1_crypto_service.html#af980bd044e7de68d61e0d3f3b3ba15eb" title="Hashes a master password using PBKDF2 with a randomly generated salt (static version)." alt="" coords="5,5,206,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,29,206,29,206,24,238,24"/>
+</map>

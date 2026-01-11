@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_41931ee71441cc97cbd2772fb1ceb6ea" kind="dir">
+    <compoundname>src/Aegis</compoundname>
+    <innerdir refid="dir_db05fca7c2f1074a16e784635bc78613">src/Aegis/Interfaces</innerdir>
+    <innerdir refid="dir_35d077fded98707bf35e11241bef1a66">src/Aegis/Models</innerdir>
+    <innerdir refid="dir_a4fe390c520b8846745f13b816896809">src/Aegis/Services</innerdir>
+    <innerdir refid="dir_59b3b812971e11661c3428848e96f0ee">src/Aegis/UI</innerdir>
+    <innerfile refid="_program_8cs">Program.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Aegis/"/>
+  </compounddef>
+</doxygen>

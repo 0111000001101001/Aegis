@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_aegis_1_1_services_1_1_crypto_service" kind="class" language="C#" prot="public">
+    <compoundname>Aegis::Services::CryptoService</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ICryptoService</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_aegis_1_1_services_1_1_crypto_service_1a6fcbee514f7dcf0b5c1147c08e573fa8" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Aegis.Services.CryptoService.SALT_SIZE</definition>
+        <argsstring></argsstring>
+        <name>SALT_SIZE</name>
+        <qualifiedname>Aegis.Services.CryptoService.SALT_SIZE</qualifiedname>
+        <initializer>= 16</initializer>
+        <briefdescription>
+<para>Defines the size of the salt for hashing in bytes. 16 * 8 = 128 bits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/CryptoService.cs" line="14" column="23" bodyfile="src/Aegis/Services/CryptoService.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_services_1_1_crypto_service_1a0520d762307c8053da5d422168461915" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Aegis.Services.CryptoService.KEY_SIZE</definition>
+        <argsstring></argsstring>
+        <name>KEY_SIZE</name>
+        <qualifiedname>Aegis.Services.CryptoService.KEY_SIZE</qualifiedname>
+        <initializer>= 32</initializer>
+        <briefdescription>
+<para>Defines the size of the key for encryption in bytes. 32 * 8 = 256 bits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/CryptoService.cs" line="19" column="23" bodyfile="src/Aegis/Services/CryptoService.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_services_1_1_crypto_service_1a0e9de4e9b93afce059cae37356186058" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Aegis.Services.CryptoService.ITERATIONS</definition>
+        <argsstring></argsstring>
+        <name>ITERATIONS</name>
+        <qualifiedname>Aegis.Services.CryptoService.ITERATIONS</qualifiedname>
+        <initializer>= 100000</initializer>
+        <briefdescription>
+<para>Defines the number of iterations for the PBKDF2 function. Higher numbers increase security but also processing time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/CryptoService.cs" line="24" column="23" bodyfile="src/Aegis/Services/CryptoService.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_services_1_1_crypto_service_1a183f4681459a86a3119bcf047ce24806" prot="private" static="yes" mutable="no">
+        <type>readonly HashAlgorithmName</type>
+        <definition>readonly HashAlgorithmName Aegis.Services.CryptoService.s_hashAlgorithm</definition>
+        <argsstring></argsstring>
+        <name>s_hashAlgorithm</name>
+        <qualifiedname>Aegis.Services.CryptoService.s_hashAlgorithm</qualifiedname>
+        <initializer>= HashAlgorithmName.SHA256</initializer>
+        <briefdescription>
+<para>Specifies the hash algorithm to be used with PBKDF2. SHA256 is a secure choice. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/CryptoService.cs" line="29" column="47" bodyfile="src/Aegis/Services/CryptoService.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_crypto_service_1ab7d8d9ba7ba8f66e50abe94b51642131" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Aegis.Services.CryptoService.HashMasterPassword</definition>
+        <argsstring>(string password, out byte[] salt)</argsstring>
+        <name>HashMasterPassword</name>
+        <qualifiedname>Aegis.Services.CryptoService.HashMasterPassword</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>out byte[]</type>
+          <declname>salt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/CryptoService.cs" line="32" column="19" bodyfile="src/Aegis/Services/CryptoService.cs" bodystart="32" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_crypto_service_1a34efeded92b69da02ab1e29deb3d355b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Aegis.Services.CryptoService.VerifyMasterPassword</definition>
+        <argsstring>(string password, string hash, byte[] salt)</argsstring>
+        <name>VerifyMasterPassword</name>
+        <qualifiedname>Aegis.Services.CryptoService.VerifyMasterPassword</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>byte[]</type>
+          <declname>salt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/CryptoService.cs" line="49" column="17" bodyfile="src/Aegis/Services/CryptoService.cs" bodystart="49" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_crypto_service_1a120cd4608e38d2c7b4d1a805d06c0f90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte[]</type>
+        <definition>byte[] Aegis.Services.CryptoService.DeriveKeyFromPassword</definition>
+        <argsstring>(string password, byte[] salt)</argsstring>
+        <name>DeriveKeyFromPassword</name>
+        <qualifiedname>Aegis.Services.CryptoService.DeriveKeyFromPassword</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>byte[]</type>
+          <declname>salt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/CryptoService.cs" line="71" column="17" bodyfile="src/Aegis/Services/CryptoService.cs" bodystart="71" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_crypto_service_1a65eeead3d0833c502639a1ebd647b635" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Aegis.Services.CryptoService.Encrypt</definition>
+        <argsstring>(string plainText, byte[] key)</argsstring>
+        <name>Encrypt</name>
+        <qualifiedname>Aegis.Services.CryptoService.Encrypt</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>plainText</declname>
+        </param>
+        <param>
+          <type>byte[]</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/CryptoService.cs" line="87" column="19" bodyfile="src/Aegis/Services/CryptoService.cs" bodystart="87" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_crypto_service_1a9bb611286230992668a3ab3e040047e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Aegis.Services.CryptoService.Decrypt</definition>
+        <argsstring>(string cipherText, byte[] key)</argsstring>
+        <name>Decrypt</name>
+        <qualifiedname>Aegis.Services.CryptoService.Decrypt</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>cipherText</declname>
+        </param>
+        <param>
+          <type>byte[]</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/CryptoService.cs" line="116" column="19" bodyfile="src/Aegis/Services/CryptoService.cs" bodystart="116" bodyend="144"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Provides cryptographic services for hashing, encryption, and decryption. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Aegis.Services.CryptoService</label>
+        <link refid="class_aegis_1_1_services_1_1_crypto_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ICryptoService</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Aegis.Services.CryptoService</label>
+        <link refid="class_aegis_1_1_services_1_1_crypto_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ICryptoService</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Aegis/Services/CryptoService.cs" line="9" column="7" bodyfile="src/Aegis/Services/CryptoService.cs" bodystart="10" bodyend="145"/>
+    <listofallmembers>
+      <member refid="class_aegis_1_1_services_1_1_crypto_service_1a9bb611286230992668a3ab3e040047e5" prot="public" virt="non-virtual"><scope>Aegis::Services::CryptoService</scope><name>Decrypt</name></member>
+      <member refid="class_aegis_1_1_services_1_1_crypto_service_1a120cd4608e38d2c7b4d1a805d06c0f90" prot="public" virt="non-virtual"><scope>Aegis::Services::CryptoService</scope><name>DeriveKeyFromPassword</name></member>
+      <member refid="class_aegis_1_1_services_1_1_crypto_service_1a65eeead3d0833c502639a1ebd647b635" prot="public" virt="non-virtual"><scope>Aegis::Services::CryptoService</scope><name>Encrypt</name></member>
+      <member refid="class_aegis_1_1_services_1_1_crypto_service_1ab7d8d9ba7ba8f66e50abe94b51642131" prot="public" virt="non-virtual"><scope>Aegis::Services::CryptoService</scope><name>HashMasterPassword</name></member>
+      <member refid="class_aegis_1_1_services_1_1_crypto_service_1a0e9de4e9b93afce059cae37356186058" prot="private" virt="non-virtual"><scope>Aegis::Services::CryptoService</scope><name>ITERATIONS</name></member>
+      <member refid="class_aegis_1_1_services_1_1_crypto_service_1a0520d762307c8053da5d422168461915" prot="private" virt="non-virtual"><scope>Aegis::Services::CryptoService</scope><name>KEY_SIZE</name></member>
+      <member refid="class_aegis_1_1_services_1_1_crypto_service_1a183f4681459a86a3119bcf047ce24806" prot="private" virt="non-virtual"><scope>Aegis::Services::CryptoService</scope><name>s_hashAlgorithm</name></member>
+      <member refid="class_aegis_1_1_services_1_1_crypto_service_1a6fcbee514f7dcf0b5c1147c08e573fa8" prot="private" virt="non-virtual"><scope>Aegis::Services::CryptoService</scope><name>SALT_SIZE</name></member>
+      <member refid="class_aegis_1_1_services_1_1_crypto_service_1a34efeded92b69da02ab1e29deb3d355b" prot="public" virt="non-virtual"><scope>Aegis::Services::CryptoService</scope><name>VerifyMasterPassword</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

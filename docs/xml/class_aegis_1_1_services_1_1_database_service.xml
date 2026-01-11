@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_aegis_1_1_services_1_1_database_service" kind="class" language="C#" prot="public">
+    <compoundname>Aegis::Services::DatabaseService</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDatabaseService</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_aegis_1_1_services_1_1_database_service_1abf2c9ab86c8d3d349ee76a14373100c1" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string Aegis.Services.DatabaseService._connectionString</definition>
+        <argsstring></argsstring>
+        <name>_connectionString</name>
+        <qualifiedname>Aegis.Services.DatabaseService._connectionString</qualifiedname>
+        <briefdescription>
+<para>The connection string for the SQLite database. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/DatabaseService.cs" line="13" column="29" bodyfile="src/Aegis/Services/DatabaseService.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_database_service_1aa720c5cbe9bc7aa1bbb9fb9f848797f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Aegis.Services.DatabaseService.DatabaseService</definition>
+        <argsstring>(string dbPath)</argsstring>
+        <name>DatabaseService</name>
+        <qualifiedname>Aegis.Services.DatabaseService.DatabaseService</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>dbPath</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_aegis_1_1_services_1_1_database_service" kindref="compound">DatabaseService</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dbPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the SQLite database file.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the database path is null or empty.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/DatabaseService.cs" line="20" column="12" bodyfile="src/Aegis/Services/DatabaseService.cs" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_database_service_1a9406db52257553c5d58e771b1c18fba4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Aegis.Services.DatabaseService.InitializeMasterDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeMasterDatabase</name>
+        <qualifiedname>Aegis.Services.DatabaseService.InitializeMasterDatabase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>SqliteException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when there is an error executing the SQL command.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/DatabaseService.cs" line="28" column="17" bodyfile="src/Aegis/Services/DatabaseService.cs" bodystart="28" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_database_service_1ab7179440975fcc844f64804f5da70901" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Aegis.Services.DatabaseService.InitializeVaultDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeVaultDatabase</name>
+        <qualifiedname>Aegis.Services.DatabaseService.InitializeVaultDatabase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>SqliteException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when there is an error executing the SQL command.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/DatabaseService.cs" line="57" column="17" bodyfile="src/Aegis/Services/DatabaseService.cs" bodystart="57" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_database_service_1a1664ed66724fd4ac6f956cb46712601f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Aegis.Services.DatabaseService.ExecuteNonQuery</definition>
+        <argsstring>(string query, params SqliteParameter[] parameters)</argsstring>
+        <name>ExecuteNonQuery</name>
+        <qualifiedname>Aegis.Services.DatabaseService.ExecuteNonQuery</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <param>
+          <type>params SqliteParameter[]</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>SqliteException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when there is an error executing the SQL command.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/DatabaseService.cs" line="86" column="17" bodyfile="src/Aegis/Services/DatabaseService.cs" bodystart="86" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_database_service_1a475d7e00be8dc792d6024b0b7cc0866c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T Aegis.Services.DatabaseService.ExecuteScalar&lt; T &gt;</definition>
+        <argsstring>(string query, params SqliteParameter[] parameters)</argsstring>
+        <name>ExecuteScalar&lt; T &gt;</name>
+        <qualifiedname>Aegis.Services.DatabaseService.ExecuteScalar&lt; T &gt;</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <param>
+          <type>params SqliteParameter[]</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>SqliteException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when there is an error executing the SQL command.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvalidCastException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when there is an error converting the result to type T.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/DatabaseService.cs" line="110" column="12" bodyfile="src/Aegis/Services/DatabaseService.cs" bodystart="110" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_database_service_1a7627803fd46de8a116033776211b724f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; Dictionary&lt; string, object &gt; &gt;</type>
+        <definition>List&lt; Dictionary&lt; string, object &gt; &gt; Aegis.Services.DatabaseService.ExecuteQuery</definition>
+        <argsstring>(string query, params SqliteParameter[] parameters)</argsstring>
+        <name>ExecuteQuery</name>
+        <qualifiedname>Aegis.Services.DatabaseService.ExecuteQuery</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <param>
+          <type>params SqliteParameter[]</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>SqliteException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when there is an error executing the SQL command.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/DatabaseService.cs" line="151" column="17" bodyfile="src/Aegis/Services/DatabaseService.cs" bodystart="151" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_database_service_1afb2c38dba8259561b2495f0d66bd25fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Aegis.Services.DatabaseService.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <qualifiedname>Aegis.Services.DatabaseService.Dispose</qualifiedname>
+        <briefdescription>
+<para>Closes any pooled connections for this database. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/DatabaseService.cs" line="192" column="17" bodyfile="src/Aegis/Services/DatabaseService.cs" bodystart="192" bodyend="195"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Provides services for interacting with the SQLite database. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Aegis.Services.DatabaseService</label>
+        <link refid="class_aegis_1_1_services_1_1_database_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IDatabaseService</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Aegis.Services.DatabaseService</label>
+        <link refid="class_aegis_1_1_services_1_1_database_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IDatabaseService</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Aegis/Services/DatabaseService.cs" line="8" column="7" bodyfile="src/Aegis/Services/DatabaseService.cs" bodystart="9" bodyend="196"/>
+    <listofallmembers>
+      <member refid="class_aegis_1_1_services_1_1_database_service_1abf2c9ab86c8d3d349ee76a14373100c1" prot="private" virt="non-virtual"><scope>Aegis::Services::DatabaseService</scope><name>_connectionString</name></member>
+      <member refid="class_aegis_1_1_services_1_1_database_service_1aa720c5cbe9bc7aa1bbb9fb9f848797f7" prot="public" virt="non-virtual"><scope>Aegis::Services::DatabaseService</scope><name>DatabaseService</name></member>
+      <member refid="class_aegis_1_1_services_1_1_database_service_1afb2c38dba8259561b2495f0d66bd25fc" prot="public" virt="non-virtual"><scope>Aegis::Services::DatabaseService</scope><name>Dispose</name></member>
+      <member refid="class_aegis_1_1_services_1_1_database_service_1a1664ed66724fd4ac6f956cb46712601f" prot="public" virt="non-virtual"><scope>Aegis::Services::DatabaseService</scope><name>ExecuteNonQuery</name></member>
+      <member refid="class_aegis_1_1_services_1_1_database_service_1a7627803fd46de8a116033776211b724f" prot="public" virt="non-virtual"><scope>Aegis::Services::DatabaseService</scope><name>ExecuteQuery</name></member>
+      <member refid="class_aegis_1_1_services_1_1_database_service_1a475d7e00be8dc792d6024b0b7cc0866c" prot="public" virt="non-virtual"><scope>Aegis::Services::DatabaseService</scope><name>ExecuteScalar&lt; T &gt;</name></member>
+      <member refid="class_aegis_1_1_services_1_1_database_service_1a9406db52257553c5d58e771b1c18fba4" prot="public" virt="non-virtual"><scope>Aegis::Services::DatabaseService</scope><name>InitializeMasterDatabase</name></member>
+      <member refid="class_aegis_1_1_services_1_1_database_service_1ab7179440975fcc844f64804f5da70901" prot="public" virt="non-virtual"><scope>Aegis::Services::DatabaseService</scope><name>InitializeVaultDatabase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

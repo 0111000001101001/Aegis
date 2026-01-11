@@ -1,0 +1,93 @@
+\doxysection{Aegis.\+Services.\+IUser\+Service Interface Reference}
+\hypertarget{interface_aegis_1_1_services_1_1_i_user_service}{}\label{interface_aegis_1_1_services_1_1_i_user_service}\index{Aegis.Services.IUserService@{Aegis.Services.IUserService}}
+
+
+Defines the contract for user-\/related operations.  
+
+
+
+
+Inheritance diagram for Aegis.\+Services.\+IUser\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{interface_aegis_1_1_services_1_1_i_user_service__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Aegis.\+Services.\+IUser\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{interface_aegis_1_1_services_1_1_i_user_service__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+User \mbox{\hyperlink{interface_aegis_1_1_services_1_1_i_user_service_a55a2b9350ef1d5336c79c128490bdd65}{Create\+User}} (string username, string password)
+\begin{DoxyCompactList}\small\item\em Creates a new user account. \end{DoxyCompactList}\item 
+User? \mbox{\hyperlink{interface_aegis_1_1_services_1_1_i_user_service_a1affa3cacd532ace4ae2a8d6176c4c29}{Authenticate\+User}} (string username, string password)
+\begin{DoxyCompactList}\small\item\em Authenticates a user based on username and password. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the contract for user-\/related operations. 
+
+\label{doc-func-members}
+\Hypertarget{interface_aegis_1_1_services_1_1_i_user_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_aegis_1_1_services_1_1_i_user_service_a1affa3cacd532ace4ae2a8d6176c4c29}\index{Aegis.Services.IUserService@{Aegis.Services.IUserService}!AuthenticateUser@{AuthenticateUser}}
+\index{AuthenticateUser@{AuthenticateUser}!Aegis.Services.IUserService@{Aegis.Services.IUserService}}
+\doxysubsubsection{\texorpdfstring{AuthenticateUser()}{AuthenticateUser()}}
+{\footnotesize\ttfamily \label{interface_aegis_1_1_services_1_1_i_user_service_a1affa3cacd532ace4ae2a8d6176c4c29} 
+User? Aegis.\+Services.\+IUser\+Service.\+Authenticate\+User (\begin{DoxyParamCaption}\item[{string}]{username}{, }\item[{string}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Authenticates a user based on username and password. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The user\textquotesingle{}s username.\\
+\hline
+{\em password} & The user\textquotesingle{}s master password.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A User object if authentication is successful; otherwise, null.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_aegis_1_1_services_1_1_user_service_aac50ecad80181d8b326c184cac474e06}{Aegis.\+Services.\+User\+Service}}.
+
+\Hypertarget{interface_aegis_1_1_services_1_1_i_user_service_a55a2b9350ef1d5336c79c128490bdd65}\index{Aegis.Services.IUserService@{Aegis.Services.IUserService}!CreateUser@{CreateUser}}
+\index{CreateUser@{CreateUser}!Aegis.Services.IUserService@{Aegis.Services.IUserService}}
+\doxysubsubsection{\texorpdfstring{CreateUser()}{CreateUser()}}
+{\footnotesize\ttfamily \label{interface_aegis_1_1_services_1_1_i_user_service_a55a2b9350ef1d5336c79c128490bdd65} 
+User Aegis.\+Services.\+IUser\+Service.\+Create\+User (\begin{DoxyParamCaption}\item[{string}]{username}{, }\item[{string}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new user account. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The desired username.\\
+\hline
+{\em password} & The desired master password.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created User object.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_aegis_1_1_services_1_1_user_service_a15467b7b25af6d456e68b6f9f839474a}{Aegis.\+Services.\+User\+Service}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Aegis/\+Services/\mbox{\hyperlink{_user_service_8cs}{User\+Service.\+cs}}\end{DoxyCompactItemize}

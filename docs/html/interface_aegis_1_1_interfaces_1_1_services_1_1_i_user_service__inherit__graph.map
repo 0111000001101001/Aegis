@@ -1,0 +1,5 @@
+<map id="Aegis.Interfaces.Services.IUserService" name="Aegis.Interfaces.Services.IUserService">
+<area shape="rect" id="Node000001" title="Defines the contract for user&#45;related operations." alt="" coords="10,5,175,112"/>
+<area shape="rect" id="Node000002" href="$class_aegis_1_1_services_1_1_user_service.html" title="Manages user&#45;related operations such as creation and authentication." alt="" coords="5,160,180,272"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,127,95,160,90,160,90,127"/>
+</map>

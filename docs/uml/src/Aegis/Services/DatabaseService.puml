@@ -1,0 +1,13 @@
+@startuml
+class DatabaseService {
+    - <<readonly>> _connectionString : string
+    + DatabaseService(dbPath:string)
+    + InitializeMasterDatabase() : void
+    + InitializeVaultDatabase() : void
+    + ExecuteNonQuery(query:string, parameters:SqliteParameter[]) : void
+    + ExecuteScalar(query:string, parameters:SqliteParameter[]) : T
+    + ExecuteQuery(query:string, parameters:SqliteParameter[]) : List<Dictionary<string, object>>
+    + Dispose() : void
+}
+IDatabaseService <|-- DatabaseService
+@enduml

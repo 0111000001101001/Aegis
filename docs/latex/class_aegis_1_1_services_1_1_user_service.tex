@@ -1,0 +1,111 @@
+\doxysection{Aegis.\+Services.\+User\+Service Class Reference}
+\hypertarget{class_aegis_1_1_services_1_1_user_service}{}\label{class_aegis_1_1_services_1_1_user_service}\index{Aegis.Services.UserService@{Aegis.Services.UserService}}
+
+
+Manages user-\/related operations such as creation and authentication.  
+
+
+
+
+Inheritance diagram for Aegis.\+Services.\+User\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{class_aegis_1_1_services_1_1_user_service__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Aegis.\+Services.\+User\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{class_aegis_1_1_services_1_1_user_service__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_aegis_1_1_services_1_1_user_service_aca39a932f2e755be0a992a2e8baf4fc3}{User\+Service}} (IDatabase\+Service db\+Service, ICrypto\+Service crypto\+Service)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{class_aegis_1_1_services_1_1_user_service}{User\+Service} class. \end{DoxyCompactList}\item 
+User \mbox{\hyperlink{class_aegis_1_1_services_1_1_user_service_a15467b7b25af6d456e68b6f9f839474a}{Create\+User}} (string username, string password)
+\item 
+User? \mbox{\hyperlink{class_aegis_1_1_services_1_1_user_service_aac50ecad80181d8b326c184cac474e06}{Authenticate\+User}} (string username, string password)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages user-\/related operations such as creation and authentication. 
+
+\label{doc-constructors}
+\Hypertarget{class_aegis_1_1_services_1_1_user_service_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_aegis_1_1_services_1_1_user_service_aca39a932f2e755be0a992a2e8baf4fc3}\index{Aegis.Services.UserService@{Aegis.Services.UserService}!UserService@{UserService}}
+\index{UserService@{UserService}!Aegis.Services.UserService@{Aegis.Services.UserService}}
+\doxysubsubsection{\texorpdfstring{UserService()}{UserService()}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_services_1_1_user_service_aca39a932f2e755be0a992a2e8baf4fc3} 
+Aegis.\+Services.\+User\+Service.\+User\+Service (\begin{DoxyParamCaption}\item[{IDatabase\+Service}]{db\+Service}{, }\item[{ICrypto\+Service}]{crypto\+Service}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \doxylink{class_aegis_1_1_services_1_1_user_service}{User\+Service} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+Service} & The database service instance.\\
+\hline
+{\em crypto\+Service} & The cryptography service instance.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when any parameter is null.\\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-func-members}
+\Hypertarget{class_aegis_1_1_services_1_1_user_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_aegis_1_1_services_1_1_user_service_aac50ecad80181d8b326c184cac474e06}\index{Aegis.Services.UserService@{Aegis.Services.UserService}!AuthenticateUser@{AuthenticateUser}}
+\index{AuthenticateUser@{AuthenticateUser}!Aegis.Services.UserService@{Aegis.Services.UserService}}
+\doxysubsubsection{\texorpdfstring{AuthenticateUser()}{AuthenticateUser()}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_services_1_1_user_service_aac50ecad80181d8b326c184cac474e06} 
+User? Aegis.\+Services.\+User\+Service.\+Authenticate\+User (\begin{DoxyParamCaption}\item[{string}]{username}{, }\item[{string}]{password}{}\end{DoxyParamCaption})}
+
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_aegis_1_1_services_1_1_user_service_aac50ecad80181d8b326c184cac474e06_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_aegis_1_1_services_1_1_user_service_a15467b7b25af6d456e68b6f9f839474a}\index{Aegis.Services.UserService@{Aegis.Services.UserService}!CreateUser@{CreateUser}}
+\index{CreateUser@{CreateUser}!Aegis.Services.UserService@{Aegis.Services.UserService}}
+\doxysubsubsection{\texorpdfstring{CreateUser()}{CreateUser()}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_services_1_1_user_service_a15467b7b25af6d456e68b6f9f839474a} 
+User Aegis.\+Services.\+User\+Service.\+Create\+User (\begin{DoxyParamCaption}\item[{string}]{username}{, }\item[{string}]{password}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & Thrown when the username or password do not meet requirements.\\
+\hline
+{\em Invalid\+Operation\+Exception} & Thrown when the username is already taken.\\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_aegis_1_1_services_1_1_user_service_a15467b7b25af6d456e68b6f9f839474a_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Aegis/\+Services/\mbox{\hyperlink{_user_service_8cs}{User\+Service.\+cs}}\end{DoxyCompactItemize}

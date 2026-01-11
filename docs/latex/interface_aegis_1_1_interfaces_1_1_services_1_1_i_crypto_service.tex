@@ -1,0 +1,144 @@
+\doxysection{Aegis.\+Interfaces.\+Services.\+ICrypto\+Service Interface Reference}
+\hypertarget{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service}{}\label{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service}\index{Aegis.Interfaces.Services.ICryptoService@{Aegis.Interfaces.Services.ICryptoService}}
+
+
+Defines the contract for cryptographic operations.  
+
+
+
+
+Collaboration diagram for Aegis.\+Interfaces.\+Services.\+ICrypto\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_a6c872330fac2ca58815052d18dd41e72}{Hash\+Master\+Password}} (string password, out byte\mbox{[}$\,$\mbox{]} salt)
+\begin{DoxyCompactList}\small\item\em Hashes a master password using PBKDF2 with a randomly generated salt. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_af277647abd003d56df7ca9483aa12ecc}{Verify\+Master\+Password}} (string password, string hash, byte\mbox{[}$\,$\mbox{]} salt)
+\begin{DoxyCompactList}\small\item\em Verifies a master password against a stored hash and salt. \end{DoxyCompactList}\item 
+byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_a6b6d9b4beb982ecef79c57d05ec69e0c}{Derive\+Key\+From\+Password}} (string password, byte\mbox{[}$\,$\mbox{]} salt)
+\begin{DoxyCompactList}\small\item\em Derives a cryptographic key from a password and salt using PBKDF2. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_a99e55f418ebf710ae8a0cfef4d4233dd}{Encrypt}} (string plain\+Text, byte\mbox{[}$\,$\mbox{]} key)
+\begin{DoxyCompactList}\small\item\em Encrypts a plaintext string using AES with a given key. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_a133345085432c0500829015abe703051}{Decrypt}} (string cipher\+Text, byte\mbox{[}$\,$\mbox{]} key)
+\begin{DoxyCompactList}\small\item\em Decrypts a ciphertext string using AES with a given key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the contract for cryptographic operations. 
+
+\label{doc-func-members}
+\Hypertarget{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_a133345085432c0500829015abe703051}\index{Aegis.Interfaces.Services.ICryptoService@{Aegis.Interfaces.Services.ICryptoService}!Decrypt@{Decrypt}}
+\index{Decrypt@{Decrypt}!Aegis.Interfaces.Services.ICryptoService@{Aegis.Interfaces.Services.ICryptoService}}
+\doxysubsubsection{\texorpdfstring{Decrypt()}{Decrypt()}}
+{\footnotesize\ttfamily \label{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_a133345085432c0500829015abe703051} 
+string Aegis.\+Interfaces.\+Services.\+ICrypto\+Service.\+Decrypt (\begin{DoxyParamCaption}\item[{string}]{cipher\+Text}{, }\item[{byte\mbox{[}$\,$\mbox{]}}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Decrypts a ciphertext string using AES with a given key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cipher\+Text} & The Base64 encoded string containing the IV and ciphertext.\\
+\hline
+{\em key} & The decryption key.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The original decrypted string.
+\end{DoxyReturn}
+\Hypertarget{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_a6b6d9b4beb982ecef79c57d05ec69e0c}\index{Aegis.Interfaces.Services.ICryptoService@{Aegis.Interfaces.Services.ICryptoService}!DeriveKeyFromPassword@{DeriveKeyFromPassword}}
+\index{DeriveKeyFromPassword@{DeriveKeyFromPassword}!Aegis.Interfaces.Services.ICryptoService@{Aegis.Interfaces.Services.ICryptoService}}
+\doxysubsubsection{\texorpdfstring{DeriveKeyFromPassword()}{DeriveKeyFromPassword()}}
+{\footnotesize\ttfamily \label{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_a6b6d9b4beb982ecef79c57d05ec69e0c} 
+byte\mbox{[}$\,$\mbox{]} Aegis.\+Interfaces.\+Services.\+ICrypto\+Service.\+Derive\+Key\+From\+Password (\begin{DoxyParamCaption}\item[{string}]{password}{, }\item[{byte\mbox{[}$\,$\mbox{]}}]{salt}{}\end{DoxyParamCaption})}
+
+
+
+Derives a cryptographic key from a password and salt using PBKDF2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & The password to derive the key from.\\
+\hline
+{\em salt} & The salt to use in the derivation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A byte array representing the derived key.
+\end{DoxyReturn}
+\Hypertarget{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_a99e55f418ebf710ae8a0cfef4d4233dd}\index{Aegis.Interfaces.Services.ICryptoService@{Aegis.Interfaces.Services.ICryptoService}!Encrypt@{Encrypt}}
+\index{Encrypt@{Encrypt}!Aegis.Interfaces.Services.ICryptoService@{Aegis.Interfaces.Services.ICryptoService}}
+\doxysubsubsection{\texorpdfstring{Encrypt()}{Encrypt()}}
+{\footnotesize\ttfamily \label{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_a99e55f418ebf710ae8a0cfef4d4233dd} 
+string Aegis.\+Interfaces.\+Services.\+ICrypto\+Service.\+Encrypt (\begin{DoxyParamCaption}\item[{string}]{plain\+Text}{, }\item[{byte\mbox{[}$\,$\mbox{]}}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Encrypts a plaintext string using AES with a given key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plain\+Text} & The string to encrypt.\\
+\hline
+{\em key} & The encryption key.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Base64 encoded string containing the IV and the encrypted ciphertext.
+\end{DoxyReturn}
+\Hypertarget{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_a6c872330fac2ca58815052d18dd41e72}\index{Aegis.Interfaces.Services.ICryptoService@{Aegis.Interfaces.Services.ICryptoService}!HashMasterPassword@{HashMasterPassword}}
+\index{HashMasterPassword@{HashMasterPassword}!Aegis.Interfaces.Services.ICryptoService@{Aegis.Interfaces.Services.ICryptoService}}
+\doxysubsubsection{\texorpdfstring{HashMasterPassword()}{HashMasterPassword()}}
+{\footnotesize\ttfamily \label{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_a6c872330fac2ca58815052d18dd41e72} 
+string Aegis.\+Interfaces.\+Services.\+ICrypto\+Service.\+Hash\+Master\+Password (\begin{DoxyParamCaption}\item[{string}]{password}{, }\item[{out byte\mbox{[}$\,$\mbox{]}}]{salt}{}\end{DoxyParamCaption})}
+
+
+
+Hashes a master password using PBKDF2 with a randomly generated salt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & The master password to hash.\\
+\hline
+{\em salt} & An out parameter that will contain the generated salt.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Base64 encoded string representing the hashed password.
+\end{DoxyReturn}
+\Hypertarget{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_af277647abd003d56df7ca9483aa12ecc}\index{Aegis.Interfaces.Services.ICryptoService@{Aegis.Interfaces.Services.ICryptoService}!VerifyMasterPassword@{VerifyMasterPassword}}
+\index{VerifyMasterPassword@{VerifyMasterPassword}!Aegis.Interfaces.Services.ICryptoService@{Aegis.Interfaces.Services.ICryptoService}}
+\doxysubsubsection{\texorpdfstring{VerifyMasterPassword()}{VerifyMasterPassword()}}
+{\footnotesize\ttfamily \label{interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_af277647abd003d56df7ca9483aa12ecc} 
+bool Aegis.\+Interfaces.\+Services.\+ICrypto\+Service.\+Verify\+Master\+Password (\begin{DoxyParamCaption}\item[{string}]{password}{, }\item[{string}]{hash}{, }\item[{byte\mbox{[}$\,$\mbox{]}}]{salt}{}\end{DoxyParamCaption})}
+
+
+
+Verifies a master password against a stored hash and salt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & The master password to verify.\\
+\hline
+{\em hash} & The stored hash as a Base64 string.\\
+\hline
+{\em salt} & The salt used when the original hash was created.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the password is correct; otherwise, false.
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Aegis/\+Interfaces/\+Services/\mbox{\hyperlink{_i_crypto_service_8cs}{ICrypto\+Service.\+cs}}\end{DoxyCompactItemize}

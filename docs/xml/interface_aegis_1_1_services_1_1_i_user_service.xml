@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="interface_aegis_1_1_services_1_1_i_user_service" kind="interface" language="C#" prot="public">
+    <compoundname>Aegis::Services::IUserService</compoundname>
+    <derivedcompoundref refid="class_aegis_1_1_services_1_1_user_service" prot="public" virt="non-virtual">Aegis.Services.UserService</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_aegis_1_1_services_1_1_i_user_service_1a55a2b9350ef1d5336c79c128490bdd65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>User</type>
+        <definition>User Aegis.Services.IUserService.CreateUser</definition>
+        <argsstring>(string username, string password)</argsstring>
+        <name>CreateUser</name>
+        <qualifiedname>Aegis.Services.IUserService.CreateUser</qualifiedname>
+        <reimplementedby refid="class_aegis_1_1_services_1_1_user_service_1a15467b7b25af6d456e68b6f9f839474a">CreateUser</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new user account. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired username.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired master password.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The created User object.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/UserService.cs" line="16" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_aegis_1_1_services_1_1_i_user_service_1a1affa3cacd532ace4ae2a8d6176c4c29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>User?</type>
+        <definition>User? Aegis.Services.IUserService.AuthenticateUser</definition>
+        <argsstring>(string username, string password)</argsstring>
+        <name>AuthenticateUser</name>
+        <qualifiedname>Aegis.Services.IUserService.AuthenticateUser</qualifiedname>
+        <reimplementedby refid="class_aegis_1_1_services_1_1_user_service_1aac50ecad80181d8b326c184cac474e06">AuthenticateUser</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+<para>Authenticates a user based on username and password. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user&apos;s username.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user&apos;s master password.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A User object if authentication is successful; otherwise, null.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/UserService.cs" line="24" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Defines the contract for user-related operations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Aegis.Services.IUserService</label>
+        <link refid="interface_aegis_1_1_services_1_1_i_user_service"/>
+      </node>
+      <node id="2">
+        <label>Aegis.Services.UserService</label>
+        <link refid="class_aegis_1_1_services_1_1_user_service"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Aegis.Services.IUserService</label>
+        <link refid="interface_aegis_1_1_services_1_1_i_user_service"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/Aegis/Services/UserService.cs" line="8" column="18" bodyfile="src/Aegis/Services/UserService.cs" bodystart="9" bodyend="25"/>
+    <listofallmembers>
+      <member refid="interface_aegis_1_1_services_1_1_i_user_service_1a1affa3cacd532ace4ae2a8d6176c4c29" prot="public" virt="non-virtual"><scope>Aegis::Services::IUserService</scope><name>AuthenticateUser</name></member>
+      <member refid="interface_aegis_1_1_services_1_1_i_user_service_1a55a2b9350ef1d5336c79c128490bdd65" prot="public" virt="non-virtual"><scope>Aegis::Services::IUserService</scope><name>CreateUser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

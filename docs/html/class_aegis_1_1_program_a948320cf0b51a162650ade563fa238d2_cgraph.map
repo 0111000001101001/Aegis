@@ -1,0 +1,5 @@
+<map id="Aegis.Program.Main" name="Aegis.Program.Main">
+<area shape="rect" id="Node000001" title="The main method that starts the application." alt="" coords="5,13,145,40"/>
+<area shape="rect" id="Node000002" href="$class_aegis_1_1_services_1_1_database_service.html#a9406db52257553c5d58e771b1c18fba4" title="Initializes the master database with the Users table." alt="" coords="193,5,410,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,24,177,24,177,29,145,29"/>
+</map>

@@ -1,0 +1,147 @@
+\doxysection{Aegis.\+Services.\+Database\+Service Class Reference}
+\hypertarget{class_aegis_1_1_services_1_1_database_service}{}\label{class_aegis_1_1_services_1_1_database_service}\index{Aegis.Services.DatabaseService@{Aegis.Services.DatabaseService}}
+
+
+Provides services for interacting with the SQLite database.  
+
+
+
+
+Inheritance diagram for Aegis.\+Services.\+Database\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{class_aegis_1_1_services_1_1_database_service__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Aegis.\+Services.\+Database\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{class_aegis_1_1_services_1_1_database_service__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_aegis_1_1_services_1_1_database_service_aa720c5cbe9bc7aa1bbb9fb9f848797f7}{Database\+Service}} (string db\+Path)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{class_aegis_1_1_services_1_1_database_service}{Database\+Service} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_aegis_1_1_services_1_1_database_service_a9406db52257553c5d58e771b1c18fba4}{Initialize\+Master\+Database}} ()
+\item 
+void \mbox{\hyperlink{class_aegis_1_1_services_1_1_database_service_ab7179440975fcc844f64804f5da70901}{Initialize\+Vault\+Database}} ()
+\item 
+void \mbox{\hyperlink{class_aegis_1_1_services_1_1_database_service_a1664ed66724fd4ac6f956cb46712601f}{Execute\+Non\+Query}} (string query, params Sqlite\+Parameter\mbox{[}$\,$\mbox{]} parameters)
+\item 
+T \mbox{\hyperlink{class_aegis_1_1_services_1_1_database_service_a475d7e00be8dc792d6024b0b7cc0866c}{Execute\+Scalar$<$ T $>$}} (string query, params Sqlite\+Parameter\mbox{[}$\,$\mbox{]} parameters)
+\item 
+List$<$ Dictionary$<$ string, object $>$ $>$ \mbox{\hyperlink{class_aegis_1_1_services_1_1_database_service_a7627803fd46de8a116033776211b724f}{Execute\+Query}} (string query, params Sqlite\+Parameter\mbox{[}$\,$\mbox{]} parameters)
+\item 
+void \mbox{\hyperlink{class_aegis_1_1_services_1_1_database_service_afb2c38dba8259561b2495f0d66bd25fc}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Closes any pooled connections for this database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides services for interacting with the SQLite database. 
+
+\label{doc-constructors}
+\Hypertarget{class_aegis_1_1_services_1_1_database_service_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_aegis_1_1_services_1_1_database_service_aa720c5cbe9bc7aa1bbb9fb9f848797f7}\index{Aegis.Services.DatabaseService@{Aegis.Services.DatabaseService}!DatabaseService@{DatabaseService}}
+\index{DatabaseService@{DatabaseService}!Aegis.Services.DatabaseService@{Aegis.Services.DatabaseService}}
+\doxysubsubsection{\texorpdfstring{DatabaseService()}{DatabaseService()}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_services_1_1_database_service_aa720c5cbe9bc7aa1bbb9fb9f848797f7} 
+Aegis.\+Services.\+Database\+Service.\+Database\+Service (\begin{DoxyParamCaption}\item[{string}]{db\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \doxylink{class_aegis_1_1_services_1_1_database_service}{Database\+Service} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+Path} & The path to the SQLite database file.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & Thrown when the database path is null or empty.\\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-func-members}
+\Hypertarget{class_aegis_1_1_services_1_1_database_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_aegis_1_1_services_1_1_database_service_afb2c38dba8259561b2495f0d66bd25fc}\index{Aegis.Services.DatabaseService@{Aegis.Services.DatabaseService}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Aegis.Services.DatabaseService@{Aegis.Services.DatabaseService}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_services_1_1_database_service_afb2c38dba8259561b2495f0d66bd25fc} 
+void Aegis.\+Services.\+Database\+Service.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Closes any pooled connections for this database. 
+
+\Hypertarget{class_aegis_1_1_services_1_1_database_service_a1664ed66724fd4ac6f956cb46712601f}\index{Aegis.Services.DatabaseService@{Aegis.Services.DatabaseService}!ExecuteNonQuery@{ExecuteNonQuery}}
+\index{ExecuteNonQuery@{ExecuteNonQuery}!Aegis.Services.DatabaseService@{Aegis.Services.DatabaseService}}
+\doxysubsubsection{\texorpdfstring{ExecuteNonQuery()}{ExecuteNonQuery()}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_services_1_1_database_service_a1664ed66724fd4ac6f956cb46712601f} 
+void Aegis.\+Services.\+Database\+Service.\+Execute\+Non\+Query (\begin{DoxyParamCaption}\item[{string}]{query}{, }\item[{params Sqlite\+Parameter\mbox{[}$\,$\mbox{]}}]{parameters}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Sqlite\+Exception} & Thrown when there is an error executing the SQL command.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_aegis_1_1_services_1_1_database_service_a7627803fd46de8a116033776211b724f}\index{Aegis.Services.DatabaseService@{Aegis.Services.DatabaseService}!ExecuteQuery@{ExecuteQuery}}
+\index{ExecuteQuery@{ExecuteQuery}!Aegis.Services.DatabaseService@{Aegis.Services.DatabaseService}}
+\doxysubsubsection{\texorpdfstring{ExecuteQuery()}{ExecuteQuery()}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_services_1_1_database_service_a7627803fd46de8a116033776211b724f} 
+List$<$ Dictionary$<$ string, object $>$ $>$ Aegis.\+Services.\+Database\+Service.\+Execute\+Query (\begin{DoxyParamCaption}\item[{string}]{query}{, }\item[{params Sqlite\+Parameter\mbox{[}$\,$\mbox{]}}]{parameters}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Sqlite\+Exception} & Thrown when there is an error executing the SQL command.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_aegis_1_1_services_1_1_database_service_a475d7e00be8dc792d6024b0b7cc0866c}\index{Aegis.Services.DatabaseService@{Aegis.Services.DatabaseService}!ExecuteScalar$<$ T $>$@{ExecuteScalar$<$ T $>$}}
+\index{ExecuteScalar$<$ T $>$@{ExecuteScalar$<$ T $>$}!Aegis.Services.DatabaseService@{Aegis.Services.DatabaseService}}
+\doxysubsubsection{\texorpdfstring{ExecuteScalar$<$ T $>$()}{ExecuteScalar< T >()}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_services_1_1_database_service_a475d7e00be8dc792d6024b0b7cc0866c} 
+T Aegis.\+Services.\+Database\+Service.\+Execute\+Scalar$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{query}{, }\item[{params Sqlite\+Parameter\mbox{[}$\,$\mbox{]}}]{parameters}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Sqlite\+Exception} & Thrown when there is an error executing the SQL command.\\
+\hline
+{\em Invalid\+Cast\+Exception} & Thrown when there is an error converting the result to type T.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_aegis_1_1_services_1_1_database_service_a9406db52257553c5d58e771b1c18fba4}\index{Aegis.Services.DatabaseService@{Aegis.Services.DatabaseService}!InitializeMasterDatabase@{InitializeMasterDatabase}}
+\index{InitializeMasterDatabase@{InitializeMasterDatabase}!Aegis.Services.DatabaseService@{Aegis.Services.DatabaseService}}
+\doxysubsubsection{\texorpdfstring{InitializeMasterDatabase()}{InitializeMasterDatabase()}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_services_1_1_database_service_a9406db52257553c5d58e771b1c18fba4} 
+void Aegis.\+Services.\+Database\+Service.\+Initialize\+Master\+Database (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Sqlite\+Exception} & Thrown when there is an error executing the SQL command.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_aegis_1_1_services_1_1_database_service_ab7179440975fcc844f64804f5da70901}\index{Aegis.Services.DatabaseService@{Aegis.Services.DatabaseService}!InitializeVaultDatabase@{InitializeVaultDatabase}}
+\index{InitializeVaultDatabase@{InitializeVaultDatabase}!Aegis.Services.DatabaseService@{Aegis.Services.DatabaseService}}
+\doxysubsubsection{\texorpdfstring{InitializeVaultDatabase()}{InitializeVaultDatabase()}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_services_1_1_database_service_ab7179440975fcc844f64804f5da70901} 
+void Aegis.\+Services.\+Database\+Service.\+Initialize\+Vault\+Database (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Sqlite\+Exception} & Thrown when there is an error executing the SQL command.\\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Aegis/\+Services/\mbox{\hyperlink{_database_service_8cs}{Database\+Service.\+cs}}\end{DoxyCompactItemize}

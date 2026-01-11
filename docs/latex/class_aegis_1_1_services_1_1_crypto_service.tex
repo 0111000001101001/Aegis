@@ -1,0 +1,101 @@
+\doxysection{Aegis.\+Services.\+Crypto\+Service Class Reference}
+\hypertarget{class_aegis_1_1_services_1_1_crypto_service}{}\label{class_aegis_1_1_services_1_1_crypto_service}\index{Aegis.Services.CryptoService@{Aegis.Services.CryptoService}}
+
+
+Provides cryptographic services for hashing, encryption, and decryption.  
+
+
+
+
+Inheritance diagram for Aegis.\+Services.\+Crypto\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{class_aegis_1_1_services_1_1_crypto_service__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Aegis.\+Services.\+Crypto\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{class_aegis_1_1_services_1_1_crypto_service__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_aegis_1_1_services_1_1_crypto_service_ab7d8d9ba7ba8f66e50abe94b51642131}{Hash\+Master\+Password}} (string password, out byte\mbox{[}$\,$\mbox{]} salt)
+\item 
+bool \mbox{\hyperlink{class_aegis_1_1_services_1_1_crypto_service_a34efeded92b69da02ab1e29deb3d355b}{Verify\+Master\+Password}} (string password, string hash, byte\mbox{[}$\,$\mbox{]} salt)
+\item 
+byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_aegis_1_1_services_1_1_crypto_service_a120cd4608e38d2c7b4d1a805d06c0f90}{Derive\+Key\+From\+Password}} (string password, byte\mbox{[}$\,$\mbox{]} salt)
+\item 
+string \mbox{\hyperlink{class_aegis_1_1_services_1_1_crypto_service_a65eeead3d0833c502639a1ebd647b635}{Encrypt}} (string plain\+Text, byte\mbox{[}$\,$\mbox{]} key)
+\item 
+string \mbox{\hyperlink{class_aegis_1_1_services_1_1_crypto_service_a9bb611286230992668a3ab3e040047e5}{Decrypt}} (string cipher\+Text, byte\mbox{[}$\,$\mbox{]} key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides cryptographic services for hashing, encryption, and decryption. 
+
+\label{doc-func-members}
+\Hypertarget{class_aegis_1_1_services_1_1_crypto_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_aegis_1_1_services_1_1_crypto_service_a9bb611286230992668a3ab3e040047e5}\index{Aegis.Services.CryptoService@{Aegis.Services.CryptoService}!Decrypt@{Decrypt}}
+\index{Decrypt@{Decrypt}!Aegis.Services.CryptoService@{Aegis.Services.CryptoService}}
+\doxysubsubsection{\texorpdfstring{Decrypt()}{Decrypt()}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_services_1_1_crypto_service_a9bb611286230992668a3ab3e040047e5} 
+string Aegis.\+Services.\+Crypto\+Service.\+Decrypt (\begin{DoxyParamCaption}\item[{string}]{cipher\+Text}{, }\item[{byte\mbox{[}$\,$\mbox{]}}]{key}{}\end{DoxyParamCaption})}
+
+
+
+
+
+\Hypertarget{class_aegis_1_1_services_1_1_crypto_service_a120cd4608e38d2c7b4d1a805d06c0f90}\index{Aegis.Services.CryptoService@{Aegis.Services.CryptoService}!DeriveKeyFromPassword@{DeriveKeyFromPassword}}
+\index{DeriveKeyFromPassword@{DeriveKeyFromPassword}!Aegis.Services.CryptoService@{Aegis.Services.CryptoService}}
+\doxysubsubsection{\texorpdfstring{DeriveKeyFromPassword()}{DeriveKeyFromPassword()}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_services_1_1_crypto_service_a120cd4608e38d2c7b4d1a805d06c0f90} 
+byte\mbox{[}$\,$\mbox{]} Aegis.\+Services.\+Crypto\+Service.\+Derive\+Key\+From\+Password (\begin{DoxyParamCaption}\item[{string}]{password}{, }\item[{byte\mbox{[}$\,$\mbox{]}}]{salt}{}\end{DoxyParamCaption})}
+
+
+
+
+
+\Hypertarget{class_aegis_1_1_services_1_1_crypto_service_a65eeead3d0833c502639a1ebd647b635}\index{Aegis.Services.CryptoService@{Aegis.Services.CryptoService}!Encrypt@{Encrypt}}
+\index{Encrypt@{Encrypt}!Aegis.Services.CryptoService@{Aegis.Services.CryptoService}}
+\doxysubsubsection{\texorpdfstring{Encrypt()}{Encrypt()}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_services_1_1_crypto_service_a65eeead3d0833c502639a1ebd647b635} 
+string Aegis.\+Services.\+Crypto\+Service.\+Encrypt (\begin{DoxyParamCaption}\item[{string}]{plain\+Text}{, }\item[{byte\mbox{[}$\,$\mbox{]}}]{key}{}\end{DoxyParamCaption})}
+
+
+
+
+
+\Hypertarget{class_aegis_1_1_services_1_1_crypto_service_ab7d8d9ba7ba8f66e50abe94b51642131}\index{Aegis.Services.CryptoService@{Aegis.Services.CryptoService}!HashMasterPassword@{HashMasterPassword}}
+\index{HashMasterPassword@{HashMasterPassword}!Aegis.Services.CryptoService@{Aegis.Services.CryptoService}}
+\doxysubsubsection{\texorpdfstring{HashMasterPassword()}{HashMasterPassword()}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_services_1_1_crypto_service_ab7d8d9ba7ba8f66e50abe94b51642131} 
+string Aegis.\+Services.\+Crypto\+Service.\+Hash\+Master\+Password (\begin{DoxyParamCaption}\item[{string}]{password}{, }\item[{out byte\mbox{[}$\,$\mbox{]}}]{salt}{}\end{DoxyParamCaption})}
+
+
+
+
+
+\Hypertarget{class_aegis_1_1_services_1_1_crypto_service_a34efeded92b69da02ab1e29deb3d355b}\index{Aegis.Services.CryptoService@{Aegis.Services.CryptoService}!VerifyMasterPassword@{VerifyMasterPassword}}
+\index{VerifyMasterPassword@{VerifyMasterPassword}!Aegis.Services.CryptoService@{Aegis.Services.CryptoService}}
+\doxysubsubsection{\texorpdfstring{VerifyMasterPassword()}{VerifyMasterPassword()}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_services_1_1_crypto_service_a34efeded92b69da02ab1e29deb3d355b} 
+bool Aegis.\+Services.\+Crypto\+Service.\+Verify\+Master\+Password (\begin{DoxyParamCaption}\item[{string}]{password}{, }\item[{string}]{hash}{, }\item[{byte\mbox{[}$\,$\mbox{]}}]{salt}{}\end{DoxyParamCaption})}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Aegis/\+Services/\mbox{\hyperlink{_crypto_service_8cs}{Crypto\+Service.\+cs}}\end{DoxyCompactItemize}

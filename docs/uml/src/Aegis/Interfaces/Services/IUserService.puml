@@ -1,0 +1,6 @@
+@startuml
+interface IUserService {
+    CreateUser(username:string, password:string) : User
+    AuthenticateUser(username:string, password:string) : User?
+}
+@enduml

@@ -1,0 +1,76 @@
+\doxysection{Aegis.\+Interfaces.\+Services.\+IUser\+Service Interface Reference}
+\hypertarget{interface_aegis_1_1_interfaces_1_1_services_1_1_i_user_service}{}\label{interface_aegis_1_1_interfaces_1_1_services_1_1_i_user_service}\index{Aegis.Interfaces.Services.IUserService@{Aegis.Interfaces.Services.IUserService}}
+
+
+Defines the contract for user-\/related operations.  
+
+
+
+
+Collaboration diagram for Aegis.\+Interfaces.\+Services.\+IUser\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{interface_aegis_1_1_interfaces_1_1_services_1_1_i_user_service__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+User \mbox{\hyperlink{interface_aegis_1_1_interfaces_1_1_services_1_1_i_user_service_a1851534c54e0186b9a1c1527e501affa}{Create\+User}} (string username, string password)
+\begin{DoxyCompactList}\small\item\em Creates a new user account. \end{DoxyCompactList}\item 
+User? \mbox{\hyperlink{interface_aegis_1_1_interfaces_1_1_services_1_1_i_user_service_a426c7462b6b102fc624398eb6cad0660}{Authenticate\+User}} (string username, string password)
+\begin{DoxyCompactList}\small\item\em Authenticates a user based on username and password. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the contract for user-\/related operations. 
+
+\label{doc-func-members}
+\Hypertarget{interface_aegis_1_1_interfaces_1_1_services_1_1_i_user_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_aegis_1_1_interfaces_1_1_services_1_1_i_user_service_a426c7462b6b102fc624398eb6cad0660}\index{Aegis.Interfaces.Services.IUserService@{Aegis.Interfaces.Services.IUserService}!AuthenticateUser@{AuthenticateUser}}
+\index{AuthenticateUser@{AuthenticateUser}!Aegis.Interfaces.Services.IUserService@{Aegis.Interfaces.Services.IUserService}}
+\doxysubsubsection{\texorpdfstring{AuthenticateUser()}{AuthenticateUser()}}
+{\footnotesize\ttfamily \label{interface_aegis_1_1_interfaces_1_1_services_1_1_i_user_service_a426c7462b6b102fc624398eb6cad0660} 
+User? Aegis.\+Interfaces.\+Services.\+IUser\+Service.\+Authenticate\+User (\begin{DoxyParamCaption}\item[{string}]{username}{, }\item[{string}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Authenticates a user based on username and password. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The user\textquotesingle{}s username.\\
+\hline
+{\em password} & The user\textquotesingle{}s master password.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A User object if authentication is successful; otherwise, null.
+\end{DoxyReturn}
+\Hypertarget{interface_aegis_1_1_interfaces_1_1_services_1_1_i_user_service_a1851534c54e0186b9a1c1527e501affa}\index{Aegis.Interfaces.Services.IUserService@{Aegis.Interfaces.Services.IUserService}!CreateUser@{CreateUser}}
+\index{CreateUser@{CreateUser}!Aegis.Interfaces.Services.IUserService@{Aegis.Interfaces.Services.IUserService}}
+\doxysubsubsection{\texorpdfstring{CreateUser()}{CreateUser()}}
+{\footnotesize\ttfamily \label{interface_aegis_1_1_interfaces_1_1_services_1_1_i_user_service_a1851534c54e0186b9a1c1527e501affa} 
+User Aegis.\+Interfaces.\+Services.\+IUser\+Service.\+Create\+User (\begin{DoxyParamCaption}\item[{string}]{username}{, }\item[{string}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new user account. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The desired username.\\
+\hline
+{\em password} & The desired master password.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created User object.
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Aegis/\+Interfaces/\+Services/\mbox{\hyperlink{_i_user_service_8cs}{IUser\+Service.\+cs}}\end{DoxyCompactItemize}

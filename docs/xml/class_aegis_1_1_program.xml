@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_aegis_1_1_program" kind="class" language="C#" prot="public">
+    <compoundname>Aegis::Program</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_aegis_1_1_program_1aea28a916862999575efebab2a37039e5" prot="private" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string Aegis.Program.DATA_DIRECTORY_NAME</definition>
+        <argsstring></argsstring>
+        <name>DATA_DIRECTORY_NAME</name>
+        <qualifiedname>Aegis.Program.DATA_DIRECTORY_NAME</qualifiedname>
+        <initializer>= &quot;data&quot;</initializer>
+        <briefdescription>
+<para>The name of the directory where all database files are stored. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="13" column="26" bodyfile="src/Aegis/Program.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_program_1af15c52dcfd90e292e0bf248e159ad617" prot="private" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string Aegis.Program.MASTER_DATABASE_FILE_NAME</definition>
+        <argsstring></argsstring>
+        <name>MASTER_DATABASE_FILE_NAME</name>
+        <qualifiedname>Aegis.Program.MASTER_DATABASE_FILE_NAME</qualifiedname>
+        <initializer>= &quot;aegis.db&quot;</initializer>
+        <briefdescription>
+<para>The filename of the master database. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="18" column="26" bodyfile="src/Aegis/Program.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_program_1aed52930f61095f8694699a0e1186f471" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Aegis.Program.MAX_LOGIN_ATTEMPTS</definition>
+        <argsstring></argsstring>
+        <name>MAX_LOGIN_ATTEMPTS</name>
+        <qualifiedname>Aegis.Program.MAX_LOGIN_ATTEMPTS</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+<para>Maximum number of login attempts before the application exits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="23" column="23" bodyfile="src/Aegis/Program.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_program_1a58bccd46c2d3acd7af4865444af1fc87" prot="private" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string Aegis.Program.s_dataDirectory</definition>
+        <argsstring></argsstring>
+        <name>s_dataDirectory</name>
+        <qualifiedname>Aegis.Program.s_dataDirectory</qualifiedname>
+        <initializer>= Path.Combine(
+        GetSolutionRoot(),
+        DATA_DIRECTORY_NAME
+    )</initializer>
+        <briefdescription>
+<para>The directory where all database files are stored. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="28" column="36" bodyfile="src/Aegis/Program.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_program_1a456c532afa336887962b44510a7857a2" prot="private" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string Aegis.Program.s_masterDatabasePath</definition>
+        <argsstring></argsstring>
+        <name>s_masterDatabasePath</name>
+        <qualifiedname>Aegis.Program.s_masterDatabasePath</qualifiedname>
+        <initializer>= Path.Combine(
+        s_dataDirectory,
+        MASTER_DATABASE_FILE_NAME
+    )</initializer>
+        <briefdescription>
+<para>The path for the master database file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="36" column="36" bodyfile="src/Aegis/Program.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_program_1a2a543bb45ac642aa5252799f17dea7e6" prot="private" static="yes" mutable="no">
+        <type>readonly List&lt; IDatabaseService &gt;</type>
+        <definition>readonly List&lt;IDatabaseService&gt; Aegis.Program.s_databaseServices</definition>
+        <argsstring></argsstring>
+        <name>s_databaseServices</name>
+        <qualifiedname>Aegis.Program.s_databaseServices</qualifiedname>
+        <initializer>= []</initializer>
+        <briefdescription>
+<para>List of database services to close on exit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="44" column="34" bodyfile="src/Aegis/Program.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_program_1ac773d62f816db576beb64086290c239f" prot="private" static="yes" mutable="no">
+        <type>? IUserService</type>
+        <definition>? IUserService Aegis.Program.s_userService</definition>
+        <argsstring></argsstring>
+        <name>s_userService</name>
+        <qualifiedname>Aegis.Program.s_userService</qualifiedname>
+        <briefdescription>
+<para>Service for user-related operations like creation and authentication. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="49" column="33" bodyfile="src/Aegis/Program.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_program_1a329bbc42e7410dfc30106c702dd8159d" prot="private" static="yes" mutable="no">
+        <type>? User</type>
+        <definition>? User Aegis.Program.s_currentUser</definition>
+        <argsstring></argsstring>
+        <name>s_currentUser</name>
+        <qualifiedname>Aegis.Program.s_currentUser</qualifiedname>
+        <briefdescription>
+<para>The currently logged-in user. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="54" column="25" bodyfile="src/Aegis/Program.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_aegis_1_1_program_1a948320cf0b51a162650ade563fa238d2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Aegis.Program.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <qualifiedname>Aegis.Program.Main</qualifiedname>
+        <briefdescription>
+<para>The main method that starts the application. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="59" column="24" bodyfile="src/Aegis/Program.cs" bodystart="59" bodyend="86"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_aegis_1_1_program_1ae6191f78a74555b0af1b34e2ef02db99" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Aegis.Program.GetSolutionRoot</definition>
+        <argsstring>()</argsstring>
+        <name>GetSolutionRoot</name>
+        <qualifiedname>Aegis.Program.GetSolutionRoot</qualifiedname>
+        <briefdescription>
+<para>Finds the solution root directory by searching upward for a marker file or folder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The path to the solution root directory.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="92" column="27" bodyfile="src/Aegis/Program.cs" bodystart="92" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_program_1a6855c2719f2be6635559abbfa483c67f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Aegis.Program.InitializeApplication</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeApplication</name>
+        <qualifiedname>Aegis.Program.InitializeApplication</qualifiedname>
+        <briefdescription>
+<para>Initializes the application by setting up directories and services. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="117" column="25" bodyfile="src/Aegis/Program.cs" bodystart="117" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_program_1a65d539dc6e2b931594e184adaea46cce" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>? string</type>
+        <definition>static ? string Aegis.Program.HandleLogin</definition>
+        <argsstring>()</argsstring>
+        <name>HandleLogin</name>
+        <qualifiedname>Aegis.Program.HandleLogin</qualifiedname>
+        <briefdescription>
+<para>Handles the login menu option. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The user&apos;s password if login is successful; otherwise, null.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="135" column="27" bodyfile="src/Aegis/Program.cs" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_program_1a197cb08974d50b0ed967b6bd26abb3f9" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>? string</type>
+        <definition>static ? string Aegis.Program.HandleCreateAccount</definition>
+        <argsstring>()</argsstring>
+        <name>HandleCreateAccount</name>
+        <qualifiedname>Aegis.Program.HandleCreateAccount</qualifiedname>
+        <briefdescription>
+<para>Handles the create account menu option. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The user&apos;s password if creation is successful; otherwise, null.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="144" column="27" bodyfile="src/Aegis/Program.cs" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_program_1ab4c9462f8d10bfc7ca870c1cf7275bca" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>? string</type>
+        <definition>static ? string Aegis.Program.HandleQuit</definition>
+        <argsstring>()</argsstring>
+        <name>HandleQuit</name>
+        <qualifiedname>Aegis.Program.HandleQuit</qualifiedname>
+        <briefdescription>
+<para>Handles the quit menu option. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Never returns as the application exits.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="153" column="27" bodyfile="src/Aegis/Program.cs" bodystart="153" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_program_1acf6d1da0e4b5f33134c307a486752ed0" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>? string</type>
+        <definition>static ? string Aegis.Program.CreateAccount</definition>
+        <argsstring>()</argsstring>
+        <name>CreateAccount</name>
+        <qualifiedname>Aegis.Program.CreateAccount</qualifiedname>
+        <briefdescription>
+<para>Handles the account creation process. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The user&apos;s password if creation is successful; otherwise, null.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="163" column="27" bodyfile="src/Aegis/Program.cs" bodystart="163" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_program_1a36bfe95f18a5277bd13619c3b2bc8e71" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>? string</type>
+        <definition>static ? string Aegis.Program.PerformLogin</definition>
+        <argsstring>()</argsstring>
+        <name>PerformLogin</name>
+        <qualifiedname>Aegis.Program.PerformLogin</qualifiedname>
+        <briefdescription>
+<para>Handles the user login process, with a limited number of attempts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The user&apos;s password if login is successful; otherwise, null.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="197" column="27" bodyfile="src/Aegis/Program.cs" bodystart="197" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_program_1a083c0fe3816022d3451f9ae4e2fc73d0" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Aegis.Program.RunMainLoop</definition>
+        <argsstring>(string sessionPassword)</argsstring>
+        <name>RunMainLoop</name>
+        <qualifiedname>Aegis.Program.RunMainLoop</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>sessionPassword</declname>
+        </param>
+        <briefdescription>
+<para>The main application loop that runs after a user is logged in. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sessionPassword</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user&apos;s raw password for this session.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="228" column="25" bodyfile="src/Aegis/Program.cs" bodystart="228" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_program_1a0491daf5445e272653682f5d87a76d72" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Aegis.Program.ProcessMainMenuChoice</definition>
+        <argsstring>(string choice, ICredentialService credentialService, byte[] encryptionKey)</argsstring>
+        <name>ProcessMainMenuChoice</name>
+        <qualifiedname>Aegis.Program.ProcessMainMenuChoice</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>choice</declname>
+        </param>
+        <param>
+          <type>ICredentialService</type>
+          <declname>credentialService</declname>
+        </param>
+        <param>
+          <type>byte[]</type>
+          <declname>encryptionKey</declname>
+        </param>
+        <briefdescription>
+<para>Processes the user&apos;s main menu selection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>choice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The selected menu option.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>credentialService</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The credential service instance.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encryptionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encryption key for the session.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="257" column="25" bodyfile="src/Aegis/Program.cs" bodystart="257" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_program_1a5fd122256ad541582ad4cfe122a41579" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Aegis.Program.ExitApplication</definition>
+        <argsstring>()</argsstring>
+        <name>ExitApplication</name>
+        <qualifiedname>Aegis.Program.ExitApplication</qualifiedname>
+        <briefdescription>
+<para>Exits the application with a friendly message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Program.cs" line="292" column="25" bodyfile="src/Aegis/Program.cs" bodystart="292" bodyend="304"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The main entry point for <ref refid="namespace_aegis" kindref="compound">Aegis</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Aegis.Program</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Aegis/Program.cs" line="8" column="15" bodyfile="src/Aegis/Program.cs" bodystart="9" bodyend="305"/>
+    <listofallmembers>
+      <member refid="class_aegis_1_1_program_1acf6d1da0e4b5f33134c307a486752ed0" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>CreateAccount</name></member>
+      <member refid="class_aegis_1_1_program_1aea28a916862999575efebab2a37039e5" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>DATA_DIRECTORY_NAME</name></member>
+      <member refid="class_aegis_1_1_program_1a5fd122256ad541582ad4cfe122a41579" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>ExitApplication</name></member>
+      <member refid="class_aegis_1_1_program_1ae6191f78a74555b0af1b34e2ef02db99" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>GetSolutionRoot</name></member>
+      <member refid="class_aegis_1_1_program_1a197cb08974d50b0ed967b6bd26abb3f9" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>HandleCreateAccount</name></member>
+      <member refid="class_aegis_1_1_program_1a65d539dc6e2b931594e184adaea46cce" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>HandleLogin</name></member>
+      <member refid="class_aegis_1_1_program_1ab4c9462f8d10bfc7ca870c1cf7275bca" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>HandleQuit</name></member>
+      <member refid="class_aegis_1_1_program_1a6855c2719f2be6635559abbfa483c67f" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>InitializeApplication</name></member>
+      <member refid="class_aegis_1_1_program_1a948320cf0b51a162650ade563fa238d2" prot="public" virt="non-virtual"><scope>Aegis::Program</scope><name>Main</name></member>
+      <member refid="class_aegis_1_1_program_1af15c52dcfd90e292e0bf248e159ad617" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>MASTER_DATABASE_FILE_NAME</name></member>
+      <member refid="class_aegis_1_1_program_1aed52930f61095f8694699a0e1186f471" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>MAX_LOGIN_ATTEMPTS</name></member>
+      <member refid="class_aegis_1_1_program_1a36bfe95f18a5277bd13619c3b2bc8e71" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>PerformLogin</name></member>
+      <member refid="class_aegis_1_1_program_1a0491daf5445e272653682f5d87a76d72" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>ProcessMainMenuChoice</name></member>
+      <member refid="class_aegis_1_1_program_1a083c0fe3816022d3451f9ae4e2fc73d0" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>RunMainLoop</name></member>
+      <member refid="class_aegis_1_1_program_1a329bbc42e7410dfc30106c702dd8159d" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>s_currentUser</name></member>
+      <member refid="class_aegis_1_1_program_1a2a543bb45ac642aa5252799f17dea7e6" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>s_databaseServices</name></member>
+      <member refid="class_aegis_1_1_program_1a58bccd46c2d3acd7af4865444af1fc87" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>s_dataDirectory</name></member>
+      <member refid="class_aegis_1_1_program_1a456c532afa336887962b44510a7857a2" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>s_masterDatabasePath</name></member>
+      <member refid="class_aegis_1_1_program_1ac773d62f816db576beb64086290c239f" prot="private" virt="non-virtual"><scope>Aegis::Program</scope><name>s_userService</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

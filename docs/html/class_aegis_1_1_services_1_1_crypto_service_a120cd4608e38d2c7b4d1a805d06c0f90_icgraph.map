@@ -1,0 +1,5 @@
+<map id="Aegis.Services.CryptoService.DeriveKeyFromPassword" name="Aegis.Services.CryptoService.DeriveKeyFromPassword">
+<area shape="rect" id="Node000001" title="Derives a cryptographic key from a password and salt using PBKDF2.A byte array representing the deriv..." alt="" coords="254,5,454,48"/>
+<area shape="rect" id="Node000002" href="$class_aegis_1_1_services_1_1_crypto_service.html#accf3c2cca0c65b8c411d28b2e2704a00" title="Derives a cryptographic key from a password and salt using PBKDF2 (static version)." alt="" coords="5,5,206,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,29,206,29,206,24,238,24"/>
+</map>

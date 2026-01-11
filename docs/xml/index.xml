@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.14.0" xml:lang="en-US">
+  <compound refid="class_aegis_1_1_u_i_1_1_console_u_i" kind="class"><name>Aegis::UI::ConsoleUI</name>
+    <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a26f3a656560df719bad6bc9035a2a2f3" kind="variable"><name>MIN_USERNAME_LENGTH</name></member>
+    <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1ae3c799cc440188e14e77bc4f79c96935" kind="variable"><name>MAX_USERNAME_LENGTH</name></member>
+    <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a8c71262a948eb15661c90b3db77141ea" kind="variable"><name>MIN_PASSWORD_LENGTH</name></member>
+    <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a10fd706a07d568e9d69e4de29ddfed7b" kind="variable"><name>MAX_PASSWORD_LENGTH</name></member>
+    <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1adfc5c003adc9ef0ae66fa325cbee7ff3" kind="variable"><name>Username</name></member>
+    <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1aeadd4353143c3bbb80b962b6d443a0e2" kind="function"><name>ShowBanner</name></member>
+    <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a8a4e2d0c448fca9622eb7465f7ff8139" kind="function"><name>ShowAccountMenu</name></member>
+    <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a8f254315bae542a53e52497080314efb" kind="function"><name>GetNewCredentials</name></member>
+    <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a6ce0cd74b49b5731ae00409ee7dbd3ed" kind="function"><name>GetLoginCredentials</name></member>
+    <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1ab4c5b496ed32e2573e99568995eeae2c" kind="function"><name>ShowMainMenu</name></member>
+    <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a6a564c06a07ab069512261b57bc84149" kind="function"><name>DisplayCredentials</name></member>
+    <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a7d3c6a8e2a8db7bb73eaadf4999ad584" kind="function"><name>ReturnToMenu</name></member>
+  </compound>
+  <compound refid="class_aegis_1_1_models_1_1_credential_entry" kind="class"><name>Aegis::Models::CredentialEntry</name>
+    <member refid="class_aegis_1_1_models_1_1_credential_entry_1a4053ba44b439dbf88aa81406e0a4e88d" kind="property"><name>Id</name></member>
+    <member refid="class_aegis_1_1_models_1_1_credential_entry_1a9d0dadb5cb990b9db1fd2b7967fadcd3" kind="property"><name>Platform</name></member>
+    <member refid="class_aegis_1_1_models_1_1_credential_entry_1afc7cbaa87cb08a4fe6775aa0476a706f" kind="property"><name>Username</name></member>
+    <member refid="class_aegis_1_1_models_1_1_credential_entry_1aaf33d350911a31aec3381d83ae39cad2" kind="property"><name>Password</name></member>
+  </compound>
+  <compound refid="class_aegis_1_1_services_1_1_credential_service" kind="class"><name>Aegis::Services::CredentialService</name>
+    <member refid="class_aegis_1_1_services_1_1_credential_service_1aaaded10806c7b6097b77eb2f5edb6f17" kind="variable"><name>GENERATED_PASSWORD_LENGTH</name></member>
+    <member refid="class_aegis_1_1_services_1_1_credential_service_1aa180e0efa677a2eccd97d308867797c0" kind="variable"><name>PASSWORD_CHARACTER_SET</name></member>
+    <member refid="class_aegis_1_1_services_1_1_credential_service_1af66ce684106c357444f566d7a8504376" kind="variable"><name>_dbService</name></member>
+    <member refid="class_aegis_1_1_services_1_1_credential_service_1a55ea895b1f5367847552e2fe5580b896" kind="variable"><name>_cryptoService</name></member>
+    <member refid="class_aegis_1_1_services_1_1_credential_service_1a89d83e043fb4bef6fd193853b0fd6a1d" kind="function"><name>CredentialService</name></member>
+    <member refid="class_aegis_1_1_services_1_1_credential_service_1a7ec254d9c1d046384f124e5dc4a13f37" kind="function"><name>AddCredential</name></member>
+    <member refid="class_aegis_1_1_services_1_1_credential_service_1a4decc1c96dcf3675028d632930c3f317" kind="function"><name>ViewAllCredentials</name></member>
+    <member refid="class_aegis_1_1_services_1_1_credential_service_1adbece30689de2a4ecee8910b013d330d" kind="function"><name>UpdateCredential</name></member>
+    <member refid="class_aegis_1_1_services_1_1_credential_service_1a3afedf29aa3c6fc4b8feb9448e847dda" kind="function"><name>DeleteCredential</name></member>
+    <member refid="class_aegis_1_1_services_1_1_credential_service_1a6a6a28eac3e4e9e08c0420da818fa97f" kind="function"><name>SearchCredentials</name></member>
+    <member refid="class_aegis_1_1_services_1_1_credential_service_1a4e4b79e116f5cc168b141a90fe150726" kind="function"><name>GenerateRandomPassword</name></member>
+    <member refid="class_aegis_1_1_services_1_1_credential_service_1a749fc2bbc57278096988983183bc35ea" kind="function"><name>DecryptCredentialList</name></member>
+    <member refid="class_aegis_1_1_services_1_1_credential_service_1a114383ede3aac1d81a6418527bf04162" kind="function"><name>CredentialExists</name></member>
+    <member refid="class_aegis_1_1_services_1_1_credential_service_1a3aff7a2679b54af3df929dbd5aa54828" kind="function"><name>GetNextAvailableId</name></member>
+    <member refid="class_aegis_1_1_services_1_1_credential_service_1aae5936982a3b919d264aef61dc7b88b2" kind="function"><name>CopyPasswordToClipboard</name></member>
+  </compound>
+  <compound refid="class_aegis_1_1_services_1_1_crypto_service" kind="class"><name>Aegis::Services::CryptoService</name>
+    <member refid="class_aegis_1_1_services_1_1_crypto_service_1a6fcbee514f7dcf0b5c1147c08e573fa8" kind="variable"><name>SALT_SIZE</name></member>
+    <member refid="class_aegis_1_1_services_1_1_crypto_service_1a0520d762307c8053da5d422168461915" kind="variable"><name>KEY_SIZE</name></member>
+    <member refid="class_aegis_1_1_services_1_1_crypto_service_1a0e9de4e9b93afce059cae37356186058" kind="variable"><name>ITERATIONS</name></member>
+    <member refid="class_aegis_1_1_services_1_1_crypto_service_1a183f4681459a86a3119bcf047ce24806" kind="variable"><name>s_hashAlgorithm</name></member>
+    <member refid="class_aegis_1_1_services_1_1_crypto_service_1ab7d8d9ba7ba8f66e50abe94b51642131" kind="function"><name>HashMasterPassword</name></member>
+    <member refid="class_aegis_1_1_services_1_1_crypto_service_1a34efeded92b69da02ab1e29deb3d355b" kind="function"><name>VerifyMasterPassword</name></member>
+    <member refid="class_aegis_1_1_services_1_1_crypto_service_1a120cd4608e38d2c7b4d1a805d06c0f90" kind="function"><name>DeriveKeyFromPassword</name></member>
+    <member refid="class_aegis_1_1_services_1_1_crypto_service_1a65eeead3d0833c502639a1ebd647b635" kind="function"><name>Encrypt</name></member>
+    <member refid="class_aegis_1_1_services_1_1_crypto_service_1a9bb611286230992668a3ab3e040047e5" kind="function"><name>Decrypt</name></member>
+  </compound>
+  <compound refid="class_aegis_1_1_services_1_1_database_service" kind="class"><name>Aegis::Services::DatabaseService</name>
+    <member refid="class_aegis_1_1_services_1_1_database_service_1abf2c9ab86c8d3d349ee76a14373100c1" kind="variable"><name>_connectionString</name></member>
+    <member refid="class_aegis_1_1_services_1_1_database_service_1aa720c5cbe9bc7aa1bbb9fb9f848797f7" kind="function"><name>DatabaseService</name></member>
+    <member refid="class_aegis_1_1_services_1_1_database_service_1a9406db52257553c5d58e771b1c18fba4" kind="function"><name>InitializeMasterDatabase</name></member>
+    <member refid="class_aegis_1_1_services_1_1_database_service_1ab7179440975fcc844f64804f5da70901" kind="function"><name>InitializeVaultDatabase</name></member>
+    <member refid="class_aegis_1_1_services_1_1_database_service_1a1664ed66724fd4ac6f956cb46712601f" kind="function"><name>ExecuteNonQuery</name></member>
+    <member refid="class_aegis_1_1_services_1_1_database_service_1a475d7e00be8dc792d6024b0b7cc0866c" kind="function"><name>ExecuteScalar&lt; T &gt;</name></member>
+    <member refid="class_aegis_1_1_services_1_1_database_service_1a7627803fd46de8a116033776211b724f" kind="function"><name>ExecuteQuery</name></member>
+    <member refid="class_aegis_1_1_services_1_1_database_service_1afb2c38dba8259561b2495f0d66bd25fc" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_credential_service" kind="interface"><name>Aegis::Interfaces::Services::ICredentialService</name>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_credential_service_1a29f028e393ed9a1de265be1937715e60" kind="function"><name>AddCredential</name></member>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_credential_service_1aeb8f94502cbc49d42c971d038c6e4da4" kind="function"><name>ViewAllCredentials</name></member>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_credential_service_1ab8f5cd771ac99ebebba5906df529a371" kind="function"><name>UpdateCredential</name></member>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_credential_service_1a472e3c27a81b10c82f1397bb02ab87ca" kind="function"><name>DeleteCredential</name></member>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_credential_service_1a5a0f06b95f9d4bc8186aea51774f27b5" kind="function"><name>SearchCredentials</name></member>
+  </compound>
+  <compound refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service" kind="interface"><name>Aegis::Interfaces::Services::ICryptoService</name>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_1a6c872330fac2ca58815052d18dd41e72" kind="function"><name>HashMasterPassword</name></member>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_1af277647abd003d56df7ca9483aa12ecc" kind="function"><name>VerifyMasterPassword</name></member>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_1a6b6d9b4beb982ecef79c57d05ec69e0c" kind="function"><name>DeriveKeyFromPassword</name></member>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_1a99e55f418ebf710ae8a0cfef4d4233dd" kind="function"><name>Encrypt</name></member>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_1a133345085432c0500829015abe703051" kind="function"><name>Decrypt</name></member>
+  </compound>
+  <compound refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service" kind="interface"><name>Aegis::Interfaces::Services::IDatabaseService</name>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1a05758af945d9a42b37314192e4b3e06e" kind="function"><name>InitializeMasterDatabase</name></member>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1ad4e3dd419dbedca8bc742015876532bd" kind="function"><name>InitializeVaultDatabase</name></member>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1ae4cb78f2fd5090d249fc9508f957de2a" kind="function"><name>ExecuteNonQuery</name></member>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1a24f7b6dbc3fa9efff6bf8372baf4ffd2" kind="function"><name>ExecuteScalar&lt; T &gt;</name></member>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1ada0118edd951e966f6c45f5c5f4f3f12" kind="function"><name>ExecuteQuery</name></member>
+  </compound>
+  <compound refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_user_service" kind="interface"><name>Aegis::Interfaces::Services::IUserService</name>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_user_service_1a1851534c54e0186b9a1c1527e501affa" kind="function"><name>CreateUser</name></member>
+    <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_user_service_1a426c7462b6b102fc624398eb6cad0660" kind="function"><name>AuthenticateUser</name></member>
+  </compound>
+  <compound refid="class_aegis_1_1_program" kind="class"><name>Aegis::Program</name>
+    <member refid="class_aegis_1_1_program_1aea28a916862999575efebab2a37039e5" kind="variable"><name>DATA_DIRECTORY_NAME</name></member>
+    <member refid="class_aegis_1_1_program_1af15c52dcfd90e292e0bf248e159ad617" kind="variable"><name>MASTER_DATABASE_FILE_NAME</name></member>
+    <member refid="class_aegis_1_1_program_1aed52930f61095f8694699a0e1186f471" kind="variable"><name>MAX_LOGIN_ATTEMPTS</name></member>
+    <member refid="class_aegis_1_1_program_1a58bccd46c2d3acd7af4865444af1fc87" kind="variable"><name>s_dataDirectory</name></member>
+    <member refid="class_aegis_1_1_program_1a456c532afa336887962b44510a7857a2" kind="variable"><name>s_masterDatabasePath</name></member>
+    <member refid="class_aegis_1_1_program_1a2a543bb45ac642aa5252799f17dea7e6" kind="variable"><name>s_databaseServices</name></member>
+    <member refid="class_aegis_1_1_program_1ac773d62f816db576beb64086290c239f" kind="variable"><name>s_userService</name></member>
+    <member refid="class_aegis_1_1_program_1a329bbc42e7410dfc30106c702dd8159d" kind="variable"><name>s_currentUser</name></member>
+    <member refid="class_aegis_1_1_program_1a948320cf0b51a162650ade563fa238d2" kind="function"><name>Main</name></member>
+    <member refid="class_aegis_1_1_program_1ae6191f78a74555b0af1b34e2ef02db99" kind="function"><name>GetSolutionRoot</name></member>
+    <member refid="class_aegis_1_1_program_1a6855c2719f2be6635559abbfa483c67f" kind="function"><name>InitializeApplication</name></member>
+    <member refid="class_aegis_1_1_program_1a65d539dc6e2b931594e184adaea46cce" kind="function"><name>HandleLogin</name></member>
+    <member refid="class_aegis_1_1_program_1a197cb08974d50b0ed967b6bd26abb3f9" kind="function"><name>HandleCreateAccount</name></member>
+    <member refid="class_aegis_1_1_program_1ab4c9462f8d10bfc7ca870c1cf7275bca" kind="function"><name>HandleQuit</name></member>
+    <member refid="class_aegis_1_1_program_1acf6d1da0e4b5f33134c307a486752ed0" kind="function"><name>CreateAccount</name></member>
+    <member refid="class_aegis_1_1_program_1a36bfe95f18a5277bd13619c3b2bc8e71" kind="function"><name>PerformLogin</name></member>
+    <member refid="class_aegis_1_1_program_1a083c0fe3816022d3451f9ae4e2fc73d0" kind="function"><name>RunMainLoop</name></member>
+    <member refid="class_aegis_1_1_program_1a0491daf5445e272653682f5d87a76d72" kind="function"><name>ProcessMainMenuChoice</name></member>
+    <member refid="class_aegis_1_1_program_1a5fd122256ad541582ad4cfe122a41579" kind="function"><name>ExitApplication</name></member>
+  </compound>
+  <compound refid="class_aegis_1_1_models_1_1_user" kind="class"><name>Aegis::Models::User</name>
+    <member refid="class_aegis_1_1_models_1_1_user_1a0a24f30d4013679b5c3ba6cbaccb32df" kind="property"><name>Id</name></member>
+    <member refid="class_aegis_1_1_models_1_1_user_1a2b9713a7c347ec82fe46e6d6212cb24c" kind="property"><name>Username</name></member>
+    <member refid="class_aegis_1_1_models_1_1_user_1ad8b61f62233708f81d366449cd24f92b" kind="property"><name>MasterPassword</name></member>
+    <member refid="class_aegis_1_1_models_1_1_user_1a4461d272034ea74702ded0f4f28999ad" kind="property"><name>Salt</name></member>
+  </compound>
+  <compound refid="class_aegis_1_1_services_1_1_user_service" kind="class"><name>Aegis::Services::UserService</name>
+    <member refid="class_aegis_1_1_services_1_1_user_service_1a1eddbb4a324d9f79eb111ac54e4ae16c" kind="variable"><name>RESERVED_MASTER_DATABASE_NAME</name></member>
+    <member refid="class_aegis_1_1_services_1_1_user_service_1a399993314fbd237e93079ec83166283f" kind="variable"><name>MIN_USERNAME_LENGTH</name></member>
+    <member refid="class_aegis_1_1_services_1_1_user_service_1a068b6ae90861e6477fdc7e106be4b4bb" kind="variable"><name>MAX_USERNAME_LENGTH</name></member>
+    <member refid="class_aegis_1_1_services_1_1_user_service_1aad44947d278292fa45f0f37a86322219" kind="variable"><name>MIN_PASSWORD_LENGTH</name></member>
+    <member refid="class_aegis_1_1_services_1_1_user_service_1a8d55b06fb6e37c9c039e0402e9cb3b4c" kind="variable"><name>MAX_PASSWORD_LENGTH</name></member>
+    <member refid="class_aegis_1_1_services_1_1_user_service_1a609792f39ad8ea7cfdc4a13e2bf3bdc7" kind="variable"><name>_dbService</name></member>
+    <member refid="class_aegis_1_1_services_1_1_user_service_1a8a346892746cc98c5779d44d5de56af5" kind="variable"><name>_cryptoService</name></member>
+    <member refid="class_aegis_1_1_services_1_1_user_service_1aca39a932f2e755be0a992a2e8baf4fc3" kind="function"><name>UserService</name></member>
+    <member refid="class_aegis_1_1_services_1_1_user_service_1a15467b7b25af6d456e68b6f9f839474a" kind="function"><name>CreateUser</name></member>
+    <member refid="class_aegis_1_1_services_1_1_user_service_1aac50ecad80181d8b326c184cac474e06" kind="function"><name>AuthenticateUser</name></member>
+    <member refid="class_aegis_1_1_services_1_1_user_service_1a27f144d2f802e71df365510ad6332403" kind="function"><name>ValidateUsername</name></member>
+    <member refid="class_aegis_1_1_services_1_1_user_service_1a2b001fc17719a7f79eea9fda51907e5c" kind="function"><name>ValidatePassword</name></member>
+  </compound>
+  <compound refid="namespace_aegis" kind="namespace"><name>Aegis</name>
+  </compound>
+  <compound refid="namespace_aegis_1_1_interfaces" kind="namespace"><name>Aegis::Interfaces</name>
+  </compound>
+  <compound refid="namespace_aegis_1_1_interfaces_1_1_services" kind="namespace"><name>Aegis::Interfaces::Services</name>
+  </compound>
+  <compound refid="namespace_aegis_1_1_models" kind="namespace"><name>Aegis::Models</name>
+  </compound>
+  <compound refid="namespace_aegis_1_1_services" kind="namespace"><name>Aegis::Services</name>
+  </compound>
+  <compound refid="namespace_aegis_1_1_u_i" kind="namespace"><name>Aegis::UI</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_data_1_1_sqlite" kind="namespace"><name>Microsoft::Data::Sqlite</name>
+  </compound>
+  <compound refid="namespace_spectre_1_1_console" kind="namespace"><name>Spectre::Console</name>
+  </compound>
+  <compound refid="namespace_system_1_1_security_1_1_cryptography" kind="namespace"><name>System::Security::Cryptography</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="_i_credential_service_8cs" kind="file"><name>ICredentialService.cs</name>
+  </compound>
+  <compound refid="_i_crypto_service_8cs" kind="file"><name>ICryptoService.cs</name>
+  </compound>
+  <compound refid="_i_database_service_8cs" kind="file"><name>IDatabaseService.cs</name>
+  </compound>
+  <compound refid="_i_user_service_8cs" kind="file"><name>IUserService.cs</name>
+  </compound>
+  <compound refid="_credential_entry_8cs" kind="file"><name>CredentialEntry.cs</name>
+  </compound>
+  <compound refid="_user_8cs" kind="file"><name>User.cs</name>
+  </compound>
+  <compound refid="_program_8cs" kind="file"><name>Program.cs</name>
+  </compound>
+  <compound refid="_credential_service_8cs" kind="file"><name>CredentialService.cs</name>
+  </compound>
+  <compound refid="_crypto_service_8cs" kind="file"><name>CryptoService.cs</name>
+  </compound>
+  <compound refid="_database_service_8cs" kind="file"><name>DatabaseService.cs</name>
+  </compound>
+  <compound refid="_user_service_8cs" kind="file"><name>UserService.cs</name>
+  </compound>
+  <compound refid="_console_u_i_8cs" kind="file"><name>ConsoleUI.cs</name>
+  </compound>
+  <compound refid="dir_41931ee71441cc97cbd2772fb1ceb6ea" kind="dir"><name>src/Aegis</name>
+  </compound>
+  <compound refid="dir_db05fca7c2f1074a16e784635bc78613" kind="dir"><name>src/Aegis/Interfaces</name>
+  </compound>
+  <compound refid="dir_35d077fded98707bf35e11241bef1a66" kind="dir"><name>src/Aegis/Models</name>
+  </compound>
+  <compound refid="dir_6f8dbcfedfdb5106e8a9bfc84152aa0d" kind="dir"><name>src/Aegis/Interfaces/Services</name>
+  </compound>
+  <compound refid="dir_a4fe390c520b8846745f13b816896809" kind="dir"><name>src/Aegis/Services</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_59b3b812971e11661c3428848e96f0ee" kind="dir"><name>src/Aegis/UI</name>
+  </compound>
+</doxygenindex>

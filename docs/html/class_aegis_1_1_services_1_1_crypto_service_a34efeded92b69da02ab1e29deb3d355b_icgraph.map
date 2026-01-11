@@ -1,0 +1,5 @@
+<map id="Aegis.Services.CryptoService.VerifyMasterPassword" name="Aegis.Services.CryptoService.VerifyMasterPassword">
+<area shape="rect" id="Node000001" title="Verifies a master password against a stored hash and salt.True if the password is correct; otherwise,..." alt="" coords="254,5,454,48"/>
+<area shape="rect" id="Node000002" href="$class_aegis_1_1_services_1_1_crypto_service.html#a887970e72f4a3be229b26dacb3847f9c" title="Verifies a master password against a stored hash and salt (static version)." alt="" coords="5,5,206,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,29,206,29,206,24,238,24"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Aegis.Services.IDatabaseService" name="Aegis.Services.IDatabaseService">
+<area shape="rect" id="Node000001" title="Defines the contract for database operations." alt="" coords="19,123,195,293"/>
+<area shape="rect" id="Node000003" href="$class_aegis_1_1_services_1_1_database_service.html" title="Provides services for interacting with the SQLite database." alt="" coords="5,341,208,539"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="109,308,109,342,104,342,104,308"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="67,5,146,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,90,109,123,104,123,104,90"/>
+</map>

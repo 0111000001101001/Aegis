@@ -1,0 +1,7 @@
+@startuml
+class User <<sealed>> {
+    + Id : long <<get>> <<init>>
+    + <<required>> Username : string <<get>> <<init>>
+    + <<required>> MasterPassword : string <<get>> <<init>>
+}
+@enduml

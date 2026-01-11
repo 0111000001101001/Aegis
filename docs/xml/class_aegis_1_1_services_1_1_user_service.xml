@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_aegis_1_1_services_1_1_user_service" kind="class" language="C#" prot="public">
+    <compoundname>Aegis::Services::UserService</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IUserService</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_aegis_1_1_services_1_1_user_service_1a1eddbb4a324d9f79eb111ac54e4ae16c" prot="private" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string Aegis.Services.UserService.RESERVED_MASTER_DATABASE_NAME</definition>
+        <argsstring></argsstring>
+        <name>RESERVED_MASTER_DATABASE_NAME</name>
+        <qualifiedname>Aegis.Services.UserService.RESERVED_MASTER_DATABASE_NAME</qualifiedname>
+        <initializer>= &quot;aegis&quot;</initializer>
+        <briefdescription>
+<para>The reserved username for the master database that cannot be used. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/UserService.cs" line="13" column="26" bodyfile="src/Aegis/Services/UserService.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_services_1_1_user_service_1a399993314fbd237e93079ec83166283f" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Aegis.Services.UserService.MIN_USERNAME_LENGTH</definition>
+        <argsstring></argsstring>
+        <name>MIN_USERNAME_LENGTH</name>
+        <qualifiedname>Aegis.Services.UserService.MIN_USERNAME_LENGTH</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+<para>Minimum allowed username length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/UserService.cs" line="18" column="23" bodyfile="src/Aegis/Services/UserService.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_services_1_1_user_service_1a068b6ae90861e6477fdc7e106be4b4bb" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Aegis.Services.UserService.MAX_USERNAME_LENGTH</definition>
+        <argsstring></argsstring>
+        <name>MAX_USERNAME_LENGTH</name>
+        <qualifiedname>Aegis.Services.UserService.MAX_USERNAME_LENGTH</qualifiedname>
+        <initializer>= 16</initializer>
+        <briefdescription>
+<para>Maximum allowed username length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/UserService.cs" line="23" column="23" bodyfile="src/Aegis/Services/UserService.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_services_1_1_user_service_1aad44947d278292fa45f0f37a86322219" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Aegis.Services.UserService.MIN_PASSWORD_LENGTH</definition>
+        <argsstring></argsstring>
+        <name>MIN_PASSWORD_LENGTH</name>
+        <qualifiedname>Aegis.Services.UserService.MIN_PASSWORD_LENGTH</qualifiedname>
+        <initializer>= 8</initializer>
+        <briefdescription>
+<para>Minimum allowed password length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/UserService.cs" line="28" column="23" bodyfile="src/Aegis/Services/UserService.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_services_1_1_user_service_1a8d55b06fb6e37c9c039e0402e9cb3b4c" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Aegis.Services.UserService.MAX_PASSWORD_LENGTH</definition>
+        <argsstring></argsstring>
+        <name>MAX_PASSWORD_LENGTH</name>
+        <qualifiedname>Aegis.Services.UserService.MAX_PASSWORD_LENGTH</qualifiedname>
+        <initializer>= 128</initializer>
+        <briefdescription>
+<para>Maximum allowed password length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/UserService.cs" line="33" column="23" bodyfile="src/Aegis/Services/UserService.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_aegis_1_1_services_1_1_user_service_1a609792f39ad8ea7cfdc4a13e2bf3bdc7" prot="private" static="no" mutable="no">
+        <type>readonly IDatabaseService</type>
+        <definition>readonly IDatabaseService Aegis.Services.UserService._dbService</definition>
+        <argsstring></argsstring>
+        <name>_dbService</name>
+        <qualifiedname>Aegis.Services.UserService._dbService</qualifiedname>
+        <briefdescription>
+<para>Service for database operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/UserService.cs" line="38" column="39" bodyfile="src/Aegis/Services/UserService.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_services_1_1_user_service_1a8a346892746cc98c5779d44d5de56af5" prot="private" static="no" mutable="no">
+        <type>readonly ICryptoService</type>
+        <definition>readonly ICryptoService Aegis.Services.UserService._cryptoService</definition>
+        <argsstring></argsstring>
+        <name>_cryptoService</name>
+        <qualifiedname>Aegis.Services.UserService._cryptoService</qualifiedname>
+        <briefdescription>
+<para>Service for cryptographic operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/UserService.cs" line="43" column="37" bodyfile="src/Aegis/Services/UserService.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_user_service_1aca39a932f2e755be0a992a2e8baf4fc3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Aegis.Services.UserService.UserService</definition>
+        <argsstring>(IDatabaseService dbService, ICryptoService cryptoService)</argsstring>
+        <name>UserService</name>
+        <qualifiedname>Aegis.Services.UserService.UserService</qualifiedname>
+        <param>
+          <type>IDatabaseService</type>
+          <declname>dbService</declname>
+        </param>
+        <param>
+          <type>ICryptoService</type>
+          <declname>cryptoService</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_aegis_1_1_services_1_1_user_service" kindref="compound">UserService</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dbService</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The database service instance.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cryptoService</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cryptography service instance.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when any parameter is null.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/UserService.cs" line="51" column="12" bodyfile="src/Aegis/Services/UserService.cs" bodystart="51" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_user_service_1a15467b7b25af6d456e68b6f9f839474a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>User</type>
+        <definition>User Aegis.Services.UserService.CreateUser</definition>
+        <argsstring>(string username, string password)</argsstring>
+        <name>CreateUser</name>
+        <qualifiedname>Aegis.Services.UserService.CreateUser</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the username or password do not meet requirements.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the username is already taken.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/UserService.cs" line="63" column="17" bodyfile="src/Aegis/Services/UserService.cs" bodystart="63" bodyend="92"/>
+        <references refid="class_aegis_1_1_services_1_1_user_service_1aac50ecad80181d8b326c184cac474e06" compoundref="_user_service_8cs" startline="95" endline="133">Aegis.Services.UserService.AuthenticateUser</references>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_user_service_1aac50ecad80181d8b326c184cac474e06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>User?</type>
+        <definition>User? Aegis.Services.UserService.AuthenticateUser</definition>
+        <argsstring>(string username, string password)</argsstring>
+        <name>AuthenticateUser</name>
+        <qualifiedname>Aegis.Services.UserService.AuthenticateUser</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/UserService.cs" line="95" column="17" bodyfile="src/Aegis/Services/UserService.cs" bodystart="95" bodyend="133"/>
+        <referencedby refid="class_aegis_1_1_services_1_1_user_service_1a15467b7b25af6d456e68b6f9f839474a" compoundref="_user_service_8cs" startline="63" endline="92">Aegis.Services.UserService.CreateUser</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_user_service_1a27f144d2f802e71df365510ad6332403" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Aegis.Services.UserService.ValidateUsername</definition>
+        <argsstring>(string username)</argsstring>
+        <name>ValidateUsername</name>
+        <qualifiedname>Aegis.Services.UserService.ValidateUsername</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+<para>Validates the username format and length. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The username to validate.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the username does not meet requirements.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/UserService.cs" line="140" column="25" bodyfile="src/Aegis/Services/UserService.cs" bodystart="140" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_services_1_1_user_service_1a2b001fc17719a7f79eea9fda51907e5c" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Aegis.Services.UserService.ValidatePassword</definition>
+        <argsstring>(string password)</argsstring>
+        <name>ValidatePassword</name>
+        <qualifiedname>Aegis.Services.UserService.ValidatePassword</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+<para>Validates the password length. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The password to validate.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the password does not meet requirements.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/UserService.cs" line="187" column="25" bodyfile="src/Aegis/Services/UserService.cs" bodystart="187" bodyend="200"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Manages user-related operations such as creation and authentication. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Aegis.Services.UserService</label>
+        <link refid="class_aegis_1_1_services_1_1_user_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IUserService</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Aegis.Services.UserService</label>
+        <link refid="class_aegis_1_1_services_1_1_user_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IUserService</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Aegis/Services/UserService.cs" line="8" column="7" bodyfile="src/Aegis/Services/UserService.cs" bodystart="9" bodyend="201"/>
+    <listofallmembers>
+      <member refid="class_aegis_1_1_services_1_1_user_service_1a8a346892746cc98c5779d44d5de56af5" prot="private" virt="non-virtual"><scope>Aegis::Services::UserService</scope><name>_cryptoService</name></member>
+      <member refid="class_aegis_1_1_services_1_1_user_service_1a609792f39ad8ea7cfdc4a13e2bf3bdc7" prot="private" virt="non-virtual"><scope>Aegis::Services::UserService</scope><name>_dbService</name></member>
+      <member refid="class_aegis_1_1_services_1_1_user_service_1aac50ecad80181d8b326c184cac474e06" prot="public" virt="non-virtual"><scope>Aegis::Services::UserService</scope><name>AuthenticateUser</name></member>
+      <member refid="class_aegis_1_1_services_1_1_user_service_1a15467b7b25af6d456e68b6f9f839474a" prot="public" virt="non-virtual"><scope>Aegis::Services::UserService</scope><name>CreateUser</name></member>
+      <member refid="class_aegis_1_1_services_1_1_user_service_1a8d55b06fb6e37c9c039e0402e9cb3b4c" prot="private" virt="non-virtual"><scope>Aegis::Services::UserService</scope><name>MAX_PASSWORD_LENGTH</name></member>
+      <member refid="class_aegis_1_1_services_1_1_user_service_1a068b6ae90861e6477fdc7e106be4b4bb" prot="private" virt="non-virtual"><scope>Aegis::Services::UserService</scope><name>MAX_USERNAME_LENGTH</name></member>
+      <member refid="class_aegis_1_1_services_1_1_user_service_1aad44947d278292fa45f0f37a86322219" prot="private" virt="non-virtual"><scope>Aegis::Services::UserService</scope><name>MIN_PASSWORD_LENGTH</name></member>
+      <member refid="class_aegis_1_1_services_1_1_user_service_1a399993314fbd237e93079ec83166283f" prot="private" virt="non-virtual"><scope>Aegis::Services::UserService</scope><name>MIN_USERNAME_LENGTH</name></member>
+      <member refid="class_aegis_1_1_services_1_1_user_service_1a1eddbb4a324d9f79eb111ac54e4ae16c" prot="private" virt="non-virtual"><scope>Aegis::Services::UserService</scope><name>RESERVED_MASTER_DATABASE_NAME</name></member>
+      <member refid="class_aegis_1_1_services_1_1_user_service_1aca39a932f2e755be0a992a2e8baf4fc3" prot="public" virt="non-virtual"><scope>Aegis::Services::UserService</scope><name>UserService</name></member>
+      <member refid="class_aegis_1_1_services_1_1_user_service_1a2b001fc17719a7f79eea9fda51907e5c" prot="private" virt="non-virtual"><scope>Aegis::Services::UserService</scope><name>ValidatePassword</name></member>
+      <member refid="class_aegis_1_1_services_1_1_user_service_1a27f144d2f802e71df365510ad6332403" prot="private" virt="non-virtual"><scope>Aegis::Services::UserService</scope><name>ValidateUsername</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

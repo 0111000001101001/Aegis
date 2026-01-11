@@ -1,0 +1,17 @@
+@startuml
+class UserService {
+    - <<const>> RESERVED_MASTER_DATABASE_NAME : string = "aegis"
+    - <<const>> MIN_USERNAME_LENGTH : int = 5
+    - <<const>> MAX_USERNAME_LENGTH : int = 16
+    - <<const>> MIN_PASSWORD_LENGTH : int = 8
+    - <<const>> MAX_PASSWORD_LENGTH : int = 128
+    + UserService(dbService:IDatabaseService, cryptoService:ICryptoService)
+    + CreateUser(username:string, password:string) : User
+    + AuthenticateUser(username:string, password:string) : User?
+    - {static} ValidateUsername(username:string) : void
+    - {static} ValidatePassword(password:string) : void
+}
+IUserService <|-- UserService
+UserService --> "_dbService" IDatabaseService
+UserService --> "_cryptoService" ICryptoService
+@enduml

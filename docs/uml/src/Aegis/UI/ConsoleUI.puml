@@ -1,0 +1,15 @@
+@startuml
+class ConsoleUI <<static>> {
+    - <<const>> MIN_USERNAME_LENGTH : int = 5
+    - <<const>> MAX_USERNAME_LENGTH : int = 16
+    - <<const>> MIN_PASSWORD_LENGTH : int = 8
+    - <<const>> MAX_PASSWORD_LENGTH : int = 128
+    + {static} ShowBanner() : void
+    + {static} ShowAccountMenu() : string
+    + {static} GetNewCredentials() : (string Username, string Password)
+    + {static} GetLoginCredentials() : (string Username, string Password)
+    + {static} ShowMainMenu() : string
+    + {static} DisplayCredentials(credentials:IReadOnlyList<CredentialEntry>) : void
+    + {static} ReturnToMenu() : void
+}
+@enduml

@@ -1,0 +1,80 @@
+\doxysection{Aegis.\+Models.\+User Class Reference}
+\hypertarget{class_aegis_1_1_models_1_1_user}{}\label{class_aegis_1_1_models_1_1_user}\index{Aegis.Models.User@{Aegis.Models.User}}
+
+
+Represents a user of the password manager.  
+
+
+
+
+Collaboration diagram for Aegis.\+Models.\+User\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_aegis_1_1_models_1_1_user__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{class_aegis_1_1_models_1_1_user_a0a24f30d4013679b5c3ba6cbaccb32df}{Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the unique identifier for the user. \end{DoxyCompactList}\item 
+required string \mbox{\hyperlink{class_aegis_1_1_models_1_1_user_a2b9713a7c347ec82fe46e6d6212cb24c}{Username}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the username. \end{DoxyCompactList}\item 
+required string \mbox{\hyperlink{class_aegis_1_1_models_1_1_user_ad8b61f62233708f81d366449cd24f92b}{Master\+Password}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the user\textquotesingle{}s master password. This is only stored in memory for the duration of the user\textquotesingle{}s session to derive the encryption key for credential operations. It is not stored in the database. \end{DoxyCompactList}\item 
+required byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_aegis_1_1_models_1_1_user_a4461d272034ea74702ded0f4f28999ad}{Salt}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the salt used for hashing the master password. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a user of the password manager. 
+
+\label{doc-property-members}
+\Hypertarget{class_aegis_1_1_models_1_1_user_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_aegis_1_1_models_1_1_user_a0a24f30d4013679b5c3ba6cbaccb32df}\index{Aegis.Models.User@{Aegis.Models.User}!Id@{Id}}
+\index{Id@{Id}!Aegis.Models.User@{Aegis.Models.User}}
+\doxysubsubsection{\texorpdfstring{Id}{Id}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_models_1_1_user_a0a24f30d4013679b5c3ba6cbaccb32df} 
+long Aegis.\+Models.\+User.\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets or sets the unique identifier for the user. 
+
+\Hypertarget{class_aegis_1_1_models_1_1_user_ad8b61f62233708f81d366449cd24f92b}\index{Aegis.Models.User@{Aegis.Models.User}!MasterPassword@{MasterPassword}}
+\index{MasterPassword@{MasterPassword}!Aegis.Models.User@{Aegis.Models.User}}
+\doxysubsubsection{\texorpdfstring{MasterPassword}{MasterPassword}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_models_1_1_user_ad8b61f62233708f81d366449cd24f92b} 
+required string Aegis.\+Models.\+User.\+Master\+Password\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets or sets the user\textquotesingle{}s master password. This is only stored in memory for the duration of the user\textquotesingle{}s session to derive the encryption key for credential operations. It is not stored in the database. 
+
+\Hypertarget{class_aegis_1_1_models_1_1_user_a4461d272034ea74702ded0f4f28999ad}\index{Aegis.Models.User@{Aegis.Models.User}!Salt@{Salt}}
+\index{Salt@{Salt}!Aegis.Models.User@{Aegis.Models.User}}
+\doxysubsubsection{\texorpdfstring{Salt}{Salt}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_models_1_1_user_a4461d272034ea74702ded0f4f28999ad} 
+required byte \mbox{[}$\,$\mbox{]} Aegis.\+Models.\+User.\+Salt\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets or sets the salt used for hashing the master password. 
+
+\Hypertarget{class_aegis_1_1_models_1_1_user_a2b9713a7c347ec82fe46e6d6212cb24c}\index{Aegis.Models.User@{Aegis.Models.User}!Username@{Username}}
+\index{Username@{Username}!Aegis.Models.User@{Aegis.Models.User}}
+\doxysubsubsection{\texorpdfstring{Username}{Username}}
+{\footnotesize\ttfamily \label{class_aegis_1_1_models_1_1_user_a2b9713a7c347ec82fe46e6d6212cb24c} 
+required string Aegis.\+Models.\+User.\+Username\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets or sets the username. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Aegis/\+Models/\mbox{\hyperlink{_user_8cs}{User.\+cs}}\end{DoxyCompactItemize}

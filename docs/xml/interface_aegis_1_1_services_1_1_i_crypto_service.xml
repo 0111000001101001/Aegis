@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="interface_aegis_1_1_services_1_1_i_crypto_service" kind="interface" language="C#" prot="public">
+    <compoundname>Aegis::Services::ICryptoService</compoundname>
+    <derivedcompoundref refid="class_aegis_1_1_services_1_1_crypto_service" prot="public" virt="non-virtual">Aegis.Services.CryptoService</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_aegis_1_1_services_1_1_i_crypto_service_1a1f0ffc9d952e15b71379378cd79c43f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Aegis.Services.ICryptoService.HashMasterPassword</definition>
+        <argsstring>(string password, out byte[] salt)</argsstring>
+        <name>HashMasterPassword</name>
+        <qualifiedname>Aegis.Services.ICryptoService.HashMasterPassword</qualifiedname>
+        <reimplementedby refid="class_aegis_1_1_services_1_1_crypto_service_1ab7d8d9ba7ba8f66e50abe94b51642131">HashMasterPassword</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>out byte[]</type>
+          <declname>salt</declname>
+        </param>
+        <briefdescription>
+<para>Hashes a master password using PBKDF2 with a randomly generated salt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The master password to hash.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>salt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An out parameter that will contain the generated salt.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A Base64 encoded string representing the hashed password.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/CryptoService.cs" line="17" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_aegis_1_1_services_1_1_i_crypto_service_1a10a693308a98b11e44893f694bb3d044" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Aegis.Services.ICryptoService.VerifyMasterPassword</definition>
+        <argsstring>(string password, string hash, byte[] salt)</argsstring>
+        <name>VerifyMasterPassword</name>
+        <qualifiedname>Aegis.Services.ICryptoService.VerifyMasterPassword</qualifiedname>
+        <reimplementedby refid="class_aegis_1_1_services_1_1_crypto_service_1a34efeded92b69da02ab1e29deb3d355b">VerifyMasterPassword</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>byte[]</type>
+          <declname>salt</declname>
+        </param>
+        <briefdescription>
+<para>Verifies a master password against a stored hash and salt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The master password to verify.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The stored hash as a Base64 string.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>salt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The salt used when the original hash was created.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the password is correct; otherwise, false.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/CryptoService.cs" line="26" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_aegis_1_1_services_1_1_i_crypto_service_1a9d5be24bd1c12826247d76d1763a633d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>byte[]</type>
+        <definition>byte[] Aegis.Services.ICryptoService.DeriveKeyFromPassword</definition>
+        <argsstring>(string password, byte[] salt)</argsstring>
+        <name>DeriveKeyFromPassword</name>
+        <qualifiedname>Aegis.Services.ICryptoService.DeriveKeyFromPassword</qualifiedname>
+        <reimplementedby refid="class_aegis_1_1_services_1_1_crypto_service_1a120cd4608e38d2c7b4d1a805d06c0f90">DeriveKeyFromPassword</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>byte[]</type>
+          <declname>salt</declname>
+        </param>
+        <briefdescription>
+<para>Derives a cryptographic key from a password and salt using PBKDF2. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The password to derive the key from.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>salt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The salt to use in the derivation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A byte array representing the derived key.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/CryptoService.cs" line="34" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_aegis_1_1_services_1_1_i_crypto_service_1a1bf31b6e5dc1c1f7f66921dcb1296618" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Aegis.Services.ICryptoService.Encrypt</definition>
+        <argsstring>(string plainText, byte[] key)</argsstring>
+        <name>Encrypt</name>
+        <qualifiedname>Aegis.Services.ICryptoService.Encrypt</qualifiedname>
+        <reimplementedby refid="class_aegis_1_1_services_1_1_crypto_service_1a65eeead3d0833c502639a1ebd647b635">Encrypt</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>plainText</declname>
+        </param>
+        <param>
+          <type>byte[]</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Encrypts a plaintext string using AES with a given key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plainText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to encrypt.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encryption key.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A Base64 encoded string containing the IV and the encrypted ciphertext.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/CryptoService.cs" line="42" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_aegis_1_1_services_1_1_i_crypto_service_1af06789a89c272c5cd36c4349e673f51e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Aegis.Services.ICryptoService.Decrypt</definition>
+        <argsstring>(string cipherText, byte[] key)</argsstring>
+        <name>Decrypt</name>
+        <qualifiedname>Aegis.Services.ICryptoService.Decrypt</qualifiedname>
+        <reimplementedby refid="class_aegis_1_1_services_1_1_crypto_service_1a9bb611286230992668a3ab3e040047e5">Decrypt</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>cipherText</declname>
+        </param>
+        <param>
+          <type>byte[]</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Decrypts a ciphertext string using AES with a given key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cipherText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Base64 encoded string containing the IV and ciphertext.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The decryption key.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The original decrypted string.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Services/CryptoService.cs" line="50" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Defines the contract for cryptographic operations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Aegis.Services.ICryptoService</label>
+        <link refid="interface_aegis_1_1_services_1_1_i_crypto_service"/>
+      </node>
+      <node id="2">
+        <label>Aegis.Services.CryptoService</label>
+        <link refid="class_aegis_1_1_services_1_1_crypto_service"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Aegis.Services.ICryptoService</label>
+        <link refid="interface_aegis_1_1_services_1_1_i_crypto_service"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/Aegis/Services/CryptoService.cs" line="9" column="18" bodyfile="src/Aegis/Services/CryptoService.cs" bodystart="10" bodyend="51"/>
+    <listofallmembers>
+      <member refid="interface_aegis_1_1_services_1_1_i_crypto_service_1af06789a89c272c5cd36c4349e673f51e" prot="public" virt="non-virtual"><scope>Aegis::Services::ICryptoService</scope><name>Decrypt</name></member>
+      <member refid="interface_aegis_1_1_services_1_1_i_crypto_service_1a9d5be24bd1c12826247d76d1763a633d" prot="public" virt="non-virtual"><scope>Aegis::Services::ICryptoService</scope><name>DeriveKeyFromPassword</name></member>
+      <member refid="interface_aegis_1_1_services_1_1_i_crypto_service_1a1bf31b6e5dc1c1f7f66921dcb1296618" prot="public" virt="non-virtual"><scope>Aegis::Services::ICryptoService</scope><name>Encrypt</name></member>
+      <member refid="interface_aegis_1_1_services_1_1_i_crypto_service_1a1f0ffc9d952e15b71379378cd79c43f3" prot="public" virt="non-virtual"><scope>Aegis::Services::ICryptoService</scope><name>HashMasterPassword</name></member>
+      <member refid="interface_aegis_1_1_services_1_1_i_crypto_service_1a10a693308a98b11e44893f694bb3d044" prot="public" virt="non-virtual"><scope>Aegis::Services::ICryptoService</scope><name>VerifyMasterPassword</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

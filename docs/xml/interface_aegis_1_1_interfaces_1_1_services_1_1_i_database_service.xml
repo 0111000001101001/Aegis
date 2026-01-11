@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service" kind="interface" language="C#" prot="public">
+    <compoundname>Aegis::Interfaces::Services::IDatabaseService</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1a05758af945d9a42b37314192e4b3e06e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Aegis.Interfaces.Services.IDatabaseService.InitializeMasterDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeMasterDatabase</name>
+        <qualifiedname>Aegis.Interfaces.Services.IDatabaseService.InitializeMasterDatabase</qualifiedname>
+        <briefdescription>
+<para>Initializes the master database with the Users table. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Interfaces/Services/IDatabaseService.cs" line="13" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1ad4e3dd419dbedca8bc742015876532bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Aegis.Interfaces.Services.IDatabaseService.InitializeVaultDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeVaultDatabase</name>
+        <qualifiedname>Aegis.Interfaces.Services.IDatabaseService.InitializeVaultDatabase</qualifiedname>
+        <briefdescription>
+<para>Initializes a user&apos;s vault database with the Credentials table. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Interfaces/Services/IDatabaseService.cs" line="18" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1ae4cb78f2fd5090d249fc9508f957de2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Aegis.Interfaces.Services.IDatabaseService.ExecuteNonQuery</definition>
+        <argsstring>(string query, params SqliteParameter[] parameters)</argsstring>
+        <name>ExecuteNonQuery</name>
+        <qualifiedname>Aegis.Interfaces.Services.IDatabaseService.ExecuteNonQuery</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <param>
+          <type>params SqliteParameter[]</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Executes a non-query SQL command (e.g., INSERT, UPDATE, DELETE). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>query</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SQL query to execute.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameters to use in the SQL query.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Interfaces/Services/IDatabaseService.cs" line="25" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1a24f7b6dbc3fa9efff6bf8372baf4ffd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T Aegis.Interfaces.Services.IDatabaseService.ExecuteScalar&lt; T &gt;</definition>
+        <argsstring>(string query, params SqliteParameter[] parameters)</argsstring>
+        <name>ExecuteScalar&lt; T &gt;</name>
+        <qualifiedname>Aegis.Interfaces.Services.IDatabaseService.ExecuteScalar&lt; T &gt;</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <param>
+          <type>params SqliteParameter[]</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Executes a query that returns a single value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the value to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>query</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SQL query to execute.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameters to use in the SQL query.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The single value result of the query, converted to type T.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Interfaces/Services/IDatabaseService.cs" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1ada0118edd951e966f6c45f5c5f4f3f12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; Dictionary&lt; string, object &gt; &gt;</type>
+        <definition>List&lt; Dictionary&lt; string, object &gt; &gt; Aegis.Interfaces.Services.IDatabaseService.ExecuteQuery</definition>
+        <argsstring>(string query, params SqliteParameter[] parameters)</argsstring>
+        <name>ExecuteQuery</name>
+        <qualifiedname>Aegis.Interfaces.Services.IDatabaseService.ExecuteQuery</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <param>
+          <type>params SqliteParameter[]</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Executes a query and returns the results as a list of dictionaries. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>query</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SQL query to execute.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameters to use in the SQL query.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of dictionaries, where each dictionary represents a row with column names as keys.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/Interfaces/Services/IDatabaseService.cs" line="42" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Defines the contract for database operations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Aegis.Interfaces.Services.IDatabaseService</label>
+        <link refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IDisposable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Aegis.Interfaces.Services.IDatabaseService</label>
+        <link refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IDisposable</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Aegis/Interfaces/Services/IDatabaseService.cs" line="8" column="18" bodyfile="src/Aegis/Interfaces/Services/IDatabaseService.cs" bodystart="9" bodyend="46"/>
+    <listofallmembers>
+      <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1ae4cb78f2fd5090d249fc9508f957de2a" prot="public" virt="non-virtual"><scope>Aegis::Interfaces::Services::IDatabaseService</scope><name>ExecuteNonQuery</name></member>
+      <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1ada0118edd951e966f6c45f5c5f4f3f12" prot="public" virt="non-virtual"><scope>Aegis::Interfaces::Services::IDatabaseService</scope><name>ExecuteQuery</name></member>
+      <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1a24f7b6dbc3fa9efff6bf8372baf4ffd2" prot="public" virt="non-virtual"><scope>Aegis::Interfaces::Services::IDatabaseService</scope><name>ExecuteScalar&lt; T &gt;</name></member>
+      <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1a05758af945d9a42b37314192e4b3e06e" prot="public" virt="non-virtual"><scope>Aegis::Interfaces::Services::IDatabaseService</scope><name>InitializeMasterDatabase</name></member>
+      <member refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1ad4e3dd419dbedca8bc742015876532bd" prot="public" virt="non-virtual"><scope>Aegis::Interfaces::Services::IDatabaseService</scope><name>InitializeVaultDatabase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

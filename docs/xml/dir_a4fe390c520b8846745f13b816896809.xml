@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_a4fe390c520b8846745f13b816896809" kind="dir">
+    <compoundname>src/Aegis/Services</compoundname>
+    <innerfile refid="_credential_service_8cs">CredentialService.cs</innerfile>
+    <innerfile refid="_crypto_service_8cs">CryptoService.cs</innerfile>
+    <innerfile refid="_database_service_8cs">DatabaseService.cs</innerfile>
+    <innerfile refid="_user_service_8cs">UserService.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Aegis/Services/"/>
+  </compounddef>
+</doxygen>

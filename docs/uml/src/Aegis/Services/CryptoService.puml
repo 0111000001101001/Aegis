@@ -1,0 +1,14 @@
+@startuml
+class CryptoService {
+    - <<const>> SALT_SIZE : int = 16
+    - <<const>> KEY_SIZE : int = 32
+    - <<const>> ITERATIONS : int = 100000
+    + HashMasterPassword(password:string, salt:byte[]) : string
+    + VerifyMasterPassword(password:string, hash:string, salt:byte[]) : bool
+    + DeriveKeyFromPassword(password:string, salt:byte[]) : byte[]
+    + Encrypt(plainText:string, key:byte[]) : string
+    + Decrypt(cipherText:string, key:byte[]) : string
+}
+ICryptoService <|-- CryptoService
+CryptoService o-> "s_hashAlgorithm" HashAlgorithmName
+@enduml

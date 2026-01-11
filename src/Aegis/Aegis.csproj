@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+        <AnalysisLevel>6.0-recommended</AnalysisLevel>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Using Include="Aegis.Interfaces.Services" />
+        <Using Include="Aegis.Models" />
+        <Using Include="Aegis.Services" />
+        <Using Include="Aegis.UI" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CSharpier.Core" Version="1.2.5" />
+        <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.1" />
+        <PackageReference Include="Spectre.Console" Version="0.54.0" />
+        <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="10.0.1" />
+        <PackageReference Include="TextCopy" Version="6.2.1" />
+    </ItemGroup>
+
+</Project>

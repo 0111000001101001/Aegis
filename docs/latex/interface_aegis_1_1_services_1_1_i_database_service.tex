@@ -1,0 +1,153 @@
+\doxysection{Aegis.\+Services.\+IDatabase\+Service Interface Reference}
+\hypertarget{interface_aegis_1_1_services_1_1_i_database_service}{}\label{interface_aegis_1_1_services_1_1_i_database_service}\index{Aegis.Services.IDatabaseService@{Aegis.Services.IDatabaseService}}
+
+
+Defines the contract for database operations.  
+
+
+
+
+Inheritance diagram for Aegis.\+Services.\+IDatabase\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{interface_aegis_1_1_services_1_1_i_database_service__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Aegis.\+Services.\+IDatabase\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{interface_aegis_1_1_services_1_1_i_database_service__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_aegis_1_1_services_1_1_i_database_service_a17209f61faf37b790cc31f4b7173e735}{Initialize\+Master\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the master database with the Users table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_aegis_1_1_services_1_1_i_database_service_aec1dec4dcebc5c356132f0705f69d03e}{Initialize\+Vault\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a user\textquotesingle{}s vault database with the Credentials table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_aegis_1_1_services_1_1_i_database_service_a2a4b0760f624ba904e0a132ff8c2825f}{Execute\+Non\+Query}} (string query, params Sqlite\+Parameter\mbox{[}$\,$\mbox{]} parameters)
+\begin{DoxyCompactList}\small\item\em Executes a non-\/query SQL command (e.\+g., INSERT, UPDATE, DELETE). \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{interface_aegis_1_1_services_1_1_i_database_service_a83919c5778b39a4252179f13d5784f43}{Execute\+Scalar$<$ T $>$}} (string query, params Sqlite\+Parameter\mbox{[}$\,$\mbox{]} parameters)
+\begin{DoxyCompactList}\small\item\em Executes a query that returns a single value. \end{DoxyCompactList}\item 
+List$<$ Dictionary$<$ string, object $>$ $>$ \mbox{\hyperlink{interface_aegis_1_1_services_1_1_i_database_service_a39c8bb4b56d6401f80652f68b30b0b62}{Execute\+Query}} (string query, params Sqlite\+Parameter\mbox{[}$\,$\mbox{]} parameters)
+\begin{DoxyCompactList}\small\item\em Executes a query and returns the results as a list of dictionaries. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the contract for database operations. 
+
+\label{doc-func-members}
+\Hypertarget{interface_aegis_1_1_services_1_1_i_database_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_aegis_1_1_services_1_1_i_database_service_a2a4b0760f624ba904e0a132ff8c2825f}\index{Aegis.Services.IDatabaseService@{Aegis.Services.IDatabaseService}!ExecuteNonQuery@{ExecuteNonQuery}}
+\index{ExecuteNonQuery@{ExecuteNonQuery}!Aegis.Services.IDatabaseService@{Aegis.Services.IDatabaseService}}
+\doxysubsubsection{\texorpdfstring{ExecuteNonQuery()}{ExecuteNonQuery()}}
+{\footnotesize\ttfamily \label{interface_aegis_1_1_services_1_1_i_database_service_a2a4b0760f624ba904e0a132ff8c2825f} 
+void Aegis.\+Services.\+IDatabase\+Service.\+Execute\+Non\+Query (\begin{DoxyParamCaption}\item[{string}]{query}{, }\item[{params Sqlite\+Parameter\mbox{[}$\,$\mbox{]}}]{parameters}{}\end{DoxyParamCaption})}
+
+
+
+Executes a non-\/query SQL command (e.\+g., INSERT, UPDATE, DELETE). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & The SQL query to execute.\\
+\hline
+{\em parameters} & Parameters to use in the SQL query.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_aegis_1_1_services_1_1_database_service_a1664ed66724fd4ac6f956cb46712601f}{Aegis.\+Services.\+Database\+Service}}.
+
+\Hypertarget{interface_aegis_1_1_services_1_1_i_database_service_a39c8bb4b56d6401f80652f68b30b0b62}\index{Aegis.Services.IDatabaseService@{Aegis.Services.IDatabaseService}!ExecuteQuery@{ExecuteQuery}}
+\index{ExecuteQuery@{ExecuteQuery}!Aegis.Services.IDatabaseService@{Aegis.Services.IDatabaseService}}
+\doxysubsubsection{\texorpdfstring{ExecuteQuery()}{ExecuteQuery()}}
+{\footnotesize\ttfamily \label{interface_aegis_1_1_services_1_1_i_database_service_a39c8bb4b56d6401f80652f68b30b0b62} 
+List$<$ Dictionary$<$ string, object $>$ $>$ Aegis.\+Services.\+IDatabase\+Service.\+Execute\+Query (\begin{DoxyParamCaption}\item[{string}]{query}{, }\item[{params Sqlite\+Parameter\mbox{[}$\,$\mbox{]}}]{parameters}{}\end{DoxyParamCaption})}
+
+
+
+Executes a query and returns the results as a list of dictionaries. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & The SQL query to execute.\\
+\hline
+{\em parameters} & Parameters to use in the SQL query.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of dictionaries, where each dictionary represents a row with column names as keys.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_aegis_1_1_services_1_1_database_service_a7627803fd46de8a116033776211b724f}{Aegis.\+Services.\+Database\+Service}}.
+
+\Hypertarget{interface_aegis_1_1_services_1_1_i_database_service_a83919c5778b39a4252179f13d5784f43}\index{Aegis.Services.IDatabaseService@{Aegis.Services.IDatabaseService}!ExecuteScalar$<$ T $>$@{ExecuteScalar$<$ T $>$}}
+\index{ExecuteScalar$<$ T $>$@{ExecuteScalar$<$ T $>$}!Aegis.Services.IDatabaseService@{Aegis.Services.IDatabaseService}}
+\doxysubsubsection{\texorpdfstring{ExecuteScalar$<$ T $>$()}{ExecuteScalar< T >()}}
+{\footnotesize\ttfamily \label{interface_aegis_1_1_services_1_1_i_database_service_a83919c5778b39a4252179f13d5784f43} 
+T Aegis.\+Services.\+IDatabase\+Service.\+Execute\+Scalar$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{query}{, }\item[{params Sqlite\+Parameter\mbox{[}$\,$\mbox{]}}]{parameters}{}\end{DoxyParamCaption})}
+
+
+
+Executes a query that returns a single value. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the value to return.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em query} & The SQL query to execute.\\
+\hline
+{\em parameters} & Parameters to use in the SQL query.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The single value result of the query, converted to type T.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_aegis_1_1_services_1_1_database_service_a475d7e00be8dc792d6024b0b7cc0866c}{Aegis.\+Services.\+Database\+Service}}.
+
+\Hypertarget{interface_aegis_1_1_services_1_1_i_database_service_a17209f61faf37b790cc31f4b7173e735}\index{Aegis.Services.IDatabaseService@{Aegis.Services.IDatabaseService}!InitializeMasterDatabase@{InitializeMasterDatabase}}
+\index{InitializeMasterDatabase@{InitializeMasterDatabase}!Aegis.Services.IDatabaseService@{Aegis.Services.IDatabaseService}}
+\doxysubsubsection{\texorpdfstring{InitializeMasterDatabase()}{InitializeMasterDatabase()}}
+{\footnotesize\ttfamily \label{interface_aegis_1_1_services_1_1_i_database_service_a17209f61faf37b790cc31f4b7173e735} 
+void Aegis.\+Services.\+IDatabase\+Service.\+Initialize\+Master\+Database (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the master database with the Users table. 
+
+
+
+Implemented in \mbox{\hyperlink{class_aegis_1_1_services_1_1_database_service_a9406db52257553c5d58e771b1c18fba4}{Aegis.\+Services.\+Database\+Service}}.
+
+\Hypertarget{interface_aegis_1_1_services_1_1_i_database_service_aec1dec4dcebc5c356132f0705f69d03e}\index{Aegis.Services.IDatabaseService@{Aegis.Services.IDatabaseService}!InitializeVaultDatabase@{InitializeVaultDatabase}}
+\index{InitializeVaultDatabase@{InitializeVaultDatabase}!Aegis.Services.IDatabaseService@{Aegis.Services.IDatabaseService}}
+\doxysubsubsection{\texorpdfstring{InitializeVaultDatabase()}{InitializeVaultDatabase()}}
+{\footnotesize\ttfamily \label{interface_aegis_1_1_services_1_1_i_database_service_aec1dec4dcebc5c356132f0705f69d03e} 
+void Aegis.\+Services.\+IDatabase\+Service.\+Initialize\+Vault\+Database (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a user\textquotesingle{}s vault database with the Credentials table. 
+
+
+
+Implemented in \mbox{\hyperlink{class_aegis_1_1_services_1_1_database_service_ab7179440975fcc844f64804f5da70901}{Aegis.\+Services.\+Database\+Service}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Aegis/\+Services/\mbox{\hyperlink{_database_service_8cs}{Database\+Service.\+cs}}\end{DoxyCompactItemize}

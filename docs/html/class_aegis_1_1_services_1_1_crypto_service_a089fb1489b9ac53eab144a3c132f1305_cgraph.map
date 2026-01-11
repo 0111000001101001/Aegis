@@ -1,0 +1,5 @@
+<map id="Aegis.Services.CryptoService.EncryptText" name="Aegis.Services.CryptoService.EncryptText">
+<area shape="rect" id="Node000001" title="Encrypts a plaintext string using AES with a given key (static version)." alt="" coords="5,5,206,48"/>
+<area shape="rect" id="Node000002" href="$class_aegis_1_1_services_1_1_crypto_service.html#a65eeead3d0833c502639a1ebd647b635" title="Encrypts a plaintext string using AES with a given key.A Base64 encoded string containing the IV and ..." alt="" coords="254,5,454,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,24,238,24,238,29,206,29"/>
+</map>

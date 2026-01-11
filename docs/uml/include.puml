@@ -1,0 +1,131 @@
+@startuml
+class Program <<static>> {
+    - <<const>> DATA_DIRECTORY_NAME : string = "data"
+    - <<const>> MASTER_DATABASE_FILE_NAME : string = "aegis.db"
+    - <<const>> MAX_LOGIN_ATTEMPTS : int = 5
+    - {static} <<readonly>> s_dataDirectory : string
+    - {static} <<readonly>> s_masterDatabasePath : string
+    - {static} s_userService : IUserService?
+    - {static} s_currentUser : User?
+    + {static} Main() : void
+    - {static} GetSolutionRoot() : string
+    - {static} InitializeApplication() : void
+    - {static} HandleLogin() : string?
+    - {static} HandleCreateAccount() : string?
+    - {static} HandleQuit() : string?
+    - {static} CreateAccount() : string?
+    - {static} PerformLogin() : string?
+    - {static} RunMainLoop(sessionPassword:string) : void
+    - {static} ProcessMainMenuChoice(choice:string, credentialService:ICredentialService, encryptionKey:byte[]) : void
+    - {static} ExitApplication() : void
+}
+class "List`1"<T> {
+}
+Program o-> "s_databaseServices<IDatabaseService>" "List`1"
+class CredentialEntry <<sealed>> {
+    + Id : long <<get>> <<init>>
+    + <<required>> Platform : string <<get>> <<init>>
+    + <<required>> Username : string <<get>> <<init>>
+    + <<required>> Password : string <<get>> <<init>>
+}
+class User <<sealed>> {
+    + Id : long <<get>> <<init>>
+    + <<required>> Username : string <<get>> <<init>>
+    + <<required>> MasterPassword : string <<get>> <<init>>
+}
+class CredentialService {
+    - <<const>> GENERATED_PASSWORD_LENGTH : int = 32
+    - <<const>> PASSWORD_CHARACTER_SET : string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@&$?!#*^+-."
+    + CredentialService(dbService:IDatabaseService, cryptoService:ICryptoService)
+    + AddCredential(encryptionKey:byte[]) : void
+    + ViewAllCredentials(encryptionKey:byte[]) : void
+    + UpdateCredential(encryptionKey:byte[]) : void
+    + DeleteCredential() : void
+    + SearchCredentials(encryptionKey:byte[]) : void
+    + {static} GenerateRandomPassword() : void
+    - DecryptCredentialList(results:List<Dictionary<string, object>>, encryptionKey:byte[]) : List<CredentialEntry>
+    - {static} CopyPasswordToClipboard(password:string) : void
+    - CredentialExists(entryId:long) : bool
+    - GetNextAvailableId() : long
+}
+ICredentialService <|-- CredentialService
+CredentialService --> "_dbService" IDatabaseService
+CredentialService --> "_cryptoService" ICryptoService
+class CryptoService {
+    - <<const>> SALT_SIZE : int = 16
+    - <<const>> KEY_SIZE : int = 32
+    - <<const>> ITERATIONS : int = 100000
+    + HashMasterPassword(password:string, salt:byte[]) : string
+    + VerifyMasterPassword(password:string, hash:string, salt:byte[]) : bool
+    + DeriveKeyFromPassword(password:string, salt:byte[]) : byte[]
+    + Encrypt(plainText:string, key:byte[]) : string
+    + Decrypt(cipherText:string, key:byte[]) : string
+}
+ICryptoService <|-- CryptoService
+CryptoService o-> "s_hashAlgorithm" HashAlgorithmName
+class DatabaseService {
+    - <<readonly>> _connectionString : string
+    + DatabaseService(dbPath:string)
+    + InitializeMasterDatabase() : void
+    + InitializeVaultDatabase() : void
+    + ExecuteNonQuery(query:string, parameters:SqliteParameter[]) : void
+    + ExecuteScalar(query:string, parameters:SqliteParameter[]) : T
+    + ExecuteQuery(query:string, parameters:SqliteParameter[]) : List<Dictionary<string, object>>
+    + Dispose() : void
+}
+IDatabaseService <|-- DatabaseService
+class UserService {
+    - <<const>> RESERVED_MASTER_DATABASE_NAME : string = "aegis"
+    - <<const>> MIN_USERNAME_LENGTH : int = 5
+    - <<const>> MAX_USERNAME_LENGTH : int = 16
+    - <<const>> MIN_PASSWORD_LENGTH : int = 8
+    - <<const>> MAX_PASSWORD_LENGTH : int = 128
+    + UserService(dbService:IDatabaseService, cryptoService:ICryptoService)
+    + CreateUser(username:string, password:string) : User
+    + AuthenticateUser(username:string, password:string) : User?
+    - {static} ValidateUsername(username:string) : void
+    - {static} ValidatePassword(password:string) : void
+}
+IUserService <|-- UserService
+UserService --> "_dbService" IDatabaseService
+UserService --> "_cryptoService" ICryptoService
+class ConsoleUI <<static>> {
+    - <<const>> MIN_USERNAME_LENGTH : int = 5
+    - <<const>> MAX_USERNAME_LENGTH : int = 16
+    - <<const>> MIN_PASSWORD_LENGTH : int = 8
+    - <<const>> MAX_PASSWORD_LENGTH : int = 128
+    + {static} ShowBanner() : void
+    + {static} ShowAccountMenu() : string
+    + {static} GetNewCredentials() : (string Username, string Password)
+    + {static} GetLoginCredentials() : (string Username, string Password)
+    + {static} ShowMainMenu() : string
+    + {static} DisplayCredentials(credentials:IReadOnlyList<CredentialEntry>) : void
+    + {static} ReturnToMenu() : void
+}
+interface ICredentialService {
+    AddCredential(encryptionKey:byte[]) : void
+    ViewAllCredentials(encryptionKey:byte[]) : void
+    UpdateCredential(encryptionKey:byte[]) : void
+    DeleteCredential() : void
+    SearchCredentials(encryptionKey:byte[]) : void
+}
+interface ICryptoService {
+    HashMasterPassword(password:string, salt:byte[]) : string
+    VerifyMasterPassword(password:string, hash:string, salt:byte[]) : bool
+    DeriveKeyFromPassword(password:string, salt:byte[]) : byte[]
+    Encrypt(plainText:string, key:byte[]) : string
+    Decrypt(cipherText:string, key:byte[]) : string
+}
+interface IDatabaseService {
+    InitializeMasterDatabase() : void
+    InitializeVaultDatabase() : void
+    ExecuteNonQuery(query:string, parameters:SqliteParameter[]) : void
+    ExecuteScalar(query:string, parameters:SqliteParameter[]) : T
+    ExecuteQuery(query:string, parameters:SqliteParameter[]) : List<Dictionary<string, object>>
+}
+IDisposable <|-- IDatabaseService
+interface IUserService {
+    CreateUser(username:string, password:string) : User
+    AuthenticateUser(username:string, password:string) : User?
+}
+@enduml

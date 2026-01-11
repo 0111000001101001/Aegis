@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespace_aegis" kind="namespace" language="C#">
+    <compoundname>Aegis</compoundname>
+    <innerclass refid="class_aegis_1_1_program" prot="public">Aegis::Program</innerclass>
+    <innernamespace refid="namespace_aegis_1_1_interfaces">Aegis::Interfaces</innernamespace>
+    <innernamespace refid="namespace_aegis_1_1_models">Aegis::Models</innernamespace>
+    <innernamespace refid="namespace_aegis_1_1_services">Aegis::Services</innernamespace>
+    <innernamespace refid="namespace_aegis_1_1_u_i">Aegis::UI</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Aegis/Interfaces/Services/ICredentialService.cs" line="1" column="1"/>
+  </compounddef>
+</doxygen>

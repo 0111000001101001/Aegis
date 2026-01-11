@@ -1,0 +1,75 @@
+﻿repos:
+  - repo: local
+    hooks:
+      # Install .NET tools defined in .config/dotnet-tools.json
+      - id: dotnet-tool-restore
+        name: Install .NET tools
+        entry: dotnet tool restore
+        language: unsupported # for pre-commit < 4.4.0 use language: system
+        always_run: true
+        pass_filenames: false
+        stages:
+          - commit
+          - push
+          - post-checkout
+          - post-rewrite
+        description: Install the .NET tools listed at .config/dotnet-tools.json.
+
+      # Run CSharpier to format C# files
+      - id: csharpier
+        name: Run CSharpier on C# files
+        entry: dotnet tool run CSharpier format
+        language: system
+        types:
+          - c#
+        description: CSharpier is an opinionated C# formatter inspired by Prettier.
+
+      # Generate PlantUML .puml files from C# source.
+      # Creates include.puml file in ./docs/uml
+      #
+      # The command:
+      # puml-gen ./src ./docs/uml -dir -excludePaths "**/bin,**/obj" -createAssociation -allInOne -addPackageTags
+      - id: puml-gen
+        name: Generate PlantUML Class Diagrams
+        entry: puml-gen
+        args: 
+          - ./src
+          - ./docs/uml
+          - -dir
+          #- -public # Uncomment to include only public types
+          - -excludePaths
+          - "**/bin,**/obj"
+          - -createAssociation
+          - -allInOne
+          - -addPackageTags
+        language: system
+        types: [c#]
+        files: ^src/
+        pass_filenames: false
+        always_run: false
+
+      # Generate PlantUML images from the include.puml file
+      #
+      # The command:
+      # java -jar lib/plantuml-1.2025.9.jar ./docs/uml/include.puml
+      - id: plantuml-images
+        name: Generate PlantUML Images
+        entry: java
+        args: 
+          - -jar
+          - lib/plantuml-1.2025.9.jar
+          - ./docs/uml/include.puml
+        language: system
+        files: ^docs/uml/include\.puml$
+        pass_filenames: false
+        always_run: false
+
+      # Generate Doxygen documentation
+      - id: doxygen
+        name: Generate Doxygen Documentation
+        entry: doxygen
+        args: [Doxyfile]
+        language: system
+        pass_filenames: false
+        always_run: false
+        verbose: true

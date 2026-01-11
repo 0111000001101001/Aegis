@@ -1,0 +1,25 @@
+@startuml
+class Program <<static>> {
+    - <<const>> DATA_DIRECTORY_NAME : string = "data"
+    - <<const>> MASTER_DATABASE_FILE_NAME : string = "aegis.db"
+    - <<const>> MAX_LOGIN_ATTEMPTS : int = 5
+    - {static} <<readonly>> s_dataDirectory : string
+    - {static} <<readonly>> s_masterDatabasePath : string
+    - {static} s_userService : IUserService?
+    - {static} s_currentUser : User?
+    + {static} Main() : void
+    - {static} GetSolutionRoot() : string
+    - {static} InitializeApplication() : void
+    - {static} HandleLogin() : string?
+    - {static} HandleCreateAccount() : string?
+    - {static} HandleQuit() : string?
+    - {static} CreateAccount() : string?
+    - {static} PerformLogin() : string?
+    - {static} RunMainLoop(sessionPassword:string) : void
+    - {static} ProcessMainMenuChoice(choice:string, credentialService:ICredentialService, encryptionKey:byte[]) : void
+    - {static} ExitApplication() : void
+}
+class "List`1"<T> {
+}
+Program o-> "s_databaseServices<IDatabaseService>" "List`1"
+@enduml

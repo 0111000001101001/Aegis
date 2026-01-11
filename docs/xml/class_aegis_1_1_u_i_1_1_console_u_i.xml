@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_aegis_1_1_u_i_1_1_console_u_i" kind="class" language="C#" prot="public">
+    <compoundname>Aegis::UI::ConsoleUI</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_aegis_1_1_u_i_1_1_console_u_i_1a26f3a656560df719bad6bc9035a2a2f3" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Aegis.UI.ConsoleUI.MIN_USERNAME_LENGTH</definition>
+        <argsstring></argsstring>
+        <name>MIN_USERNAME_LENGTH</name>
+        <qualifiedname>Aegis.UI.ConsoleUI.MIN_USERNAME_LENGTH</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+<para>Minimum allowed username length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/UI/ConsoleUI.cs" line="13" column="23" bodyfile="src/Aegis/UI/ConsoleUI.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_u_i_1_1_console_u_i_1ae3c799cc440188e14e77bc4f79c96935" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Aegis.UI.ConsoleUI.MAX_USERNAME_LENGTH</definition>
+        <argsstring></argsstring>
+        <name>MAX_USERNAME_LENGTH</name>
+        <qualifiedname>Aegis.UI.ConsoleUI.MAX_USERNAME_LENGTH</qualifiedname>
+        <initializer>= 16</initializer>
+        <briefdescription>
+<para>Maximum allowed username length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/UI/ConsoleUI.cs" line="18" column="23" bodyfile="src/Aegis/UI/ConsoleUI.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_u_i_1_1_console_u_i_1a8c71262a948eb15661c90b3db77141ea" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Aegis.UI.ConsoleUI.MIN_PASSWORD_LENGTH</definition>
+        <argsstring></argsstring>
+        <name>MIN_PASSWORD_LENGTH</name>
+        <qualifiedname>Aegis.UI.ConsoleUI.MIN_PASSWORD_LENGTH</qualifiedname>
+        <initializer>= 8</initializer>
+        <briefdescription>
+<para>Minimum allowed password length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/UI/ConsoleUI.cs" line="23" column="23" bodyfile="src/Aegis/UI/ConsoleUI.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aegis_1_1_u_i_1_1_console_u_i_1a10fd706a07d568e9d69e4de29ddfed7b" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Aegis.UI.ConsoleUI.MAX_PASSWORD_LENGTH</definition>
+        <argsstring></argsstring>
+        <name>MAX_PASSWORD_LENGTH</name>
+        <qualifiedname>Aegis.UI.ConsoleUI.MAX_PASSWORD_LENGTH</qualifiedname>
+        <initializer>= 128</initializer>
+        <briefdescription>
+<para>Maximum allowed password length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/UI/ConsoleUI.cs" line="28" column="23" bodyfile="src/Aegis/UI/ConsoleUI.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_aegis_1_1_u_i_1_1_console_u_i_1adfc5c003adc9ef0ae66fa325cbee7ff3" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>static string Aegis.UI.ConsoleUI::Username</definition>
+        <argsstring></argsstring>
+        <name>Username</name>
+        <qualifiedname>Aegis.UI.ConsoleUI.Username</qualifiedname>
+        <briefdescription>
+<para>Prompts the user for new account credentials. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Prompts the user for login credentials.</para>
+<para><simplesect kind="return"><para>A tuple containing the username and password.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/UI/ConsoleUI.cs" line="69" column="26" bodyfile="src/Aegis/UI/ConsoleUI.cs" bodystart="69" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_aegis_1_1_u_i_1_1_console_u_i_1aeadd4353143c3bbb80b962b6d443a0e2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Aegis.UI.ConsoleUI.ShowBanner</definition>
+        <argsstring>()</argsstring>
+        <name>ShowBanner</name>
+        <qualifiedname>Aegis.UI.ConsoleUI.ShowBanner</qualifiedname>
+        <briefdescription>
+<para>Displays the application banner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/UI/ConsoleUI.cs" line="33" column="24" bodyfile="src/Aegis/UI/ConsoleUI.cs" bodystart="33" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_u_i_1_1_console_u_i_1a8a4e2d0c448fca9622eb7465f7ff8139" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Aegis.UI.ConsoleUI.ShowAccountMenu</definition>
+        <argsstring>()</argsstring>
+        <name>ShowAccountMenu</name>
+        <qualifiedname>Aegis.UI.ConsoleUI.ShowAccountMenu</qualifiedname>
+        <briefdescription>
+<para>Shows the account menu and returns the user&apos;s choice. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The user&apos;s selected menu option.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/UI/ConsoleUI.cs" line="55" column="26" bodyfile="src/Aegis/UI/ConsoleUI.cs" bodystart="55" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_u_i_1_1_console_u_i_1a8f254315bae542a53e52497080314efb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string string Password</type>
+        <definition>static string string Password Aegis.UI.ConsoleUI.GetNewCredentials</definition>
+        <argsstring>()</argsstring>
+        <name>GetNewCredentials</name>
+        <qualifiedname>Aegis.UI.ConsoleUI.GetNewCredentials</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/UI/ConsoleUI.cs" line="69" column="51" bodyfile="src/Aegis/UI/ConsoleUI.cs" bodystart="69" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_u_i_1_1_console_u_i_1a6ce0cd74b49b5731ae00409ee7dbd3ed" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string string Password</type>
+        <definition>static string string Password Aegis.UI.ConsoleUI.GetLoginCredentials</definition>
+        <argsstring>()</argsstring>
+        <name>GetLoginCredentials</name>
+        <qualifiedname>Aegis.UI.ConsoleUI.GetLoginCredentials</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/UI/ConsoleUI.cs" line="92" column="51" bodyfile="src/Aegis/UI/ConsoleUI.cs" bodystart="92" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_u_i_1_1_console_u_i_1ab4c5b496ed32e2573e99568995eeae2c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Aegis.UI.ConsoleUI.ShowMainMenu</definition>
+        <argsstring>()</argsstring>
+        <name>ShowMainMenu</name>
+        <qualifiedname>Aegis.UI.ConsoleUI.ShowMainMenu</qualifiedname>
+        <briefdescription>
+<para>Shows the main menu and returns the user&apos;s choice. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The user&apos;s selected menu option.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/UI/ConsoleUI.cs" line="107" column="26" bodyfile="src/Aegis/UI/ConsoleUI.cs" bodystart="107" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_u_i_1_1_console_u_i_1a6a564c06a07ab069512261b57bc84149" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Aegis.UI.ConsoleUI.DisplayCredentials</definition>
+        <argsstring>(IReadOnlyList&lt; CredentialEntry &gt; credentials)</argsstring>
+        <name>DisplayCredentials</name>
+        <qualifiedname>Aegis.UI.ConsoleUI.DisplayCredentials</qualifiedname>
+        <param>
+          <type>IReadOnlyList&lt; CredentialEntry &gt;</type>
+          <declname>credentials</declname>
+        </param>
+        <briefdescription>
+<para>Displays a list of credentials in a table format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>credentials</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of credentials to display.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when credentials is null.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/UI/ConsoleUI.cs" line="130" column="24" bodyfile="src/Aegis/UI/ConsoleUI.cs" bodystart="130" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_aegis_1_1_u_i_1_1_console_u_i_1a7d3c6a8e2a8db7bb73eaadf4999ad584" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Aegis.UI.ConsoleUI.ReturnToMenu</definition>
+        <argsstring>()</argsstring>
+        <name>ReturnToMenu</name>
+        <qualifiedname>Aegis.UI.ConsoleUI.ReturnToMenu</qualifiedname>
+        <briefdescription>
+<para>Pauses execution and waits for the user to press a key to return to the main menu. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Aegis/UI/ConsoleUI.cs" line="158" column="24" bodyfile="src/Aegis/UI/ConsoleUI.cs" bodystart="158" bodyend="162"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Handles the user interface for the console application. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Aegis.UI.ConsoleUI</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Aegis/UI/ConsoleUI.cs" line="8" column="15" bodyfile="src/Aegis/UI/ConsoleUI.cs" bodystart="9" bodyend="163"/>
+    <listofallmembers>
+      <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a6a564c06a07ab069512261b57bc84149" prot="public" virt="non-virtual"><scope>Aegis::UI::ConsoleUI</scope><name>DisplayCredentials</name></member>
+      <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a6ce0cd74b49b5731ae00409ee7dbd3ed" prot="public" virt="non-virtual"><scope>Aegis::UI::ConsoleUI</scope><name>GetLoginCredentials</name></member>
+      <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a8f254315bae542a53e52497080314efb" prot="public" virt="non-virtual"><scope>Aegis::UI::ConsoleUI</scope><name>GetNewCredentials</name></member>
+      <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a10fd706a07d568e9d69e4de29ddfed7b" prot="private" virt="non-virtual"><scope>Aegis::UI::ConsoleUI</scope><name>MAX_PASSWORD_LENGTH</name></member>
+      <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1ae3c799cc440188e14e77bc4f79c96935" prot="private" virt="non-virtual"><scope>Aegis::UI::ConsoleUI</scope><name>MAX_USERNAME_LENGTH</name></member>
+      <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a8c71262a948eb15661c90b3db77141ea" prot="private" virt="non-virtual"><scope>Aegis::UI::ConsoleUI</scope><name>MIN_PASSWORD_LENGTH</name></member>
+      <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a26f3a656560df719bad6bc9035a2a2f3" prot="private" virt="non-virtual"><scope>Aegis::UI::ConsoleUI</scope><name>MIN_USERNAME_LENGTH</name></member>
+      <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a7d3c6a8e2a8db7bb73eaadf4999ad584" prot="public" virt="non-virtual"><scope>Aegis::UI::ConsoleUI</scope><name>ReturnToMenu</name></member>
+      <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1a8a4e2d0c448fca9622eb7465f7ff8139" prot="public" virt="non-virtual"><scope>Aegis::UI::ConsoleUI</scope><name>ShowAccountMenu</name></member>
+      <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1aeadd4353143c3bbb80b962b6d443a0e2" prot="public" virt="non-virtual"><scope>Aegis::UI::ConsoleUI</scope><name>ShowBanner</name></member>
+      <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1ab4c5b496ed32e2573e99568995eeae2c" prot="public" virt="non-virtual"><scope>Aegis::UI::ConsoleUI</scope><name>ShowMainMenu</name></member>
+      <member refid="class_aegis_1_1_u_i_1_1_console_u_i_1adfc5c003adc9ef0ae66fa325cbee7ff3" prot="public" virt="non-virtual"><scope>Aegis::UI::ConsoleUI</scope><name>Username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

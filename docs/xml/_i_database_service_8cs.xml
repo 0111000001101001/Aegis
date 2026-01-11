@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_i_database_service_8cs" kind="file" language="C#">
+    <compoundname>IDatabaseService.cs</compoundname>
+    <innerclass refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service" prot="public">Aegis::Interfaces::Services::IDatabaseService</innerclass>
+    <innernamespace refid="namespace_aegis">Aegis</innernamespace>
+    <innernamespace refid="namespace_aegis_1_1_interfaces">Aegis::Interfaces</innernamespace>
+    <innernamespace refid="namespace_aegis_1_1_interfaces_1_1_services">Aegis::Interfaces::Services</innernamespace>
+    <innernamespace refid="namespace_microsoft_1_1_data_1_1_sqlite">Microsoft::Data::Sqlite</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">Microsoft.Data.Sqlite;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_aegis_1_1_interfaces_1_1_services" kindref="compound">Aegis.Interfaces.Services</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service" kindref="compound">IDatabaseService</ref><sp/>:<sp/>IDisposable</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13" refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1a05758af945d9a42b37314192e4b3e06e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1a05758af945d9a42b37314192e4b3e06e" kindref="member">InitializeMasterDatabase</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1ad4e3dd419dbedca8bc742015876532bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1ad4e3dd419dbedca8bc742015876532bd" kindref="member">InitializeVaultDatabase</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1ae4cb78f2fd5090d249fc9508f957de2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1ae4cb78f2fd5090d249fc9508f957de2a" kindref="member">ExecuteNonQuery</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>query,<sp/>params<sp/>SqliteParameter[]<sp/>parameters);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1a24f7b6dbc3fa9efff6bf8372baf4ffd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1a24f7b6dbc3fa9efff6bf8372baf4ffd2" kindref="member">ExecuteScalar&lt;T&gt;</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>query,<sp/>params<sp/>SqliteParameter[]<sp/>parameters);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1ada0118edd951e966f6c45f5c5f4f3f12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>List&lt;Dictionary&lt;string,<sp/>object&gt;&gt;<sp/><ref refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_database_service_1ada0118edd951e966f6c45f5c5f4f3f12" kindref="member">ExecuteQuery</ref>(</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>query,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>params<sp/>SqliteParameter[]<sp/>parameters</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Aegis/Interfaces/Services/IDatabaseService.cs"/>
+  </compounddef>
+</doxygen>

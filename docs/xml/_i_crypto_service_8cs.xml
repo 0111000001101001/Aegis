@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_i_crypto_service_8cs" kind="file" language="C#">
+    <compoundname>ICryptoService.cs</compoundname>
+    <innerclass refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service" prot="public">Aegis::Interfaces::Services::ICryptoService</innerclass>
+    <innernamespace refid="namespace_aegis">Aegis</innernamespace>
+    <innernamespace refid="namespace_aegis_1_1_interfaces">Aegis::Interfaces</innernamespace>
+    <innernamespace refid="namespace_aegis_1_1_interfaces_1_1_services">Aegis::Interfaces::Services</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_aegis_1_1_interfaces_1_1_services" kindref="compound">Aegis.Interfaces.Services</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service" kindref="compound">ICryptoService</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14" refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_1a6c872330fac2ca58815052d18dd41e72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_1a6c872330fac2ca58815052d18dd41e72" kindref="member">HashMasterPassword</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>password,<sp/>out<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal">[]<sp/>salt);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_1af277647abd003d56df7ca9483aa12ecc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_1af277647abd003d56df7ca9483aa12ecc" kindref="member">VerifyMasterPassword</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>password,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>hash,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal">[]<sp/>salt);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_1a6b6d9b4beb982ecef79c57d05ec69e0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal">[]<sp/><ref refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_1a6b6d9b4beb982ecef79c57d05ec69e0c" kindref="member">DeriveKeyFromPassword</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>password,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal">[]<sp/>salt);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_1a99e55f418ebf710ae8a0cfef4d4233dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_1a99e55f418ebf710ae8a0cfef4d4233dd" kindref="member">Encrypt</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>plainText,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal">[]<sp/>key);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_1a133345085432c0500829015abe703051" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="interface_aegis_1_1_interfaces_1_1_services_1_1_i_crypto_service_1a133345085432c0500829015abe703051" kindref="member">Decrypt</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>cipherText,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal">[]<sp/>key);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Aegis/Interfaces/Services/ICryptoService.cs"/>
+  </compounddef>
+</doxygen>

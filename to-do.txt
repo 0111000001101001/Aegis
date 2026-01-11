@@ -1,0 +1,4 @@
+﻿// TODO: Implement a testing framework for unit and integration tests.
+// TODO: Implement data protection measures to prevent the accidental deletion of important files.
+// TODO: Conduct a more in-depth security audit of the application.
+// TODO: Add the ability to change the master password.
