@@ -224,7 +224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Aegis/Services/DatabaseService.cs" line="192" column="17" bodyfile="src/Aegis/Services/DatabaseService.cs" bodystart="192" bodyend="195"/>
+        <location file="src/Aegis/Services/DatabaseService.cs" line="192" column="17" bodyfile="src/Aegis/Services/DatabaseService.cs" bodystart="192" bodyend="196"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -254,7 +254,7 @@
         <label>IDatabaseService</label>
       </node>
     </collaborationgraph>
-    <location file="src/Aegis/Services/DatabaseService.cs" line="8" column="7" bodyfile="src/Aegis/Services/DatabaseService.cs" bodystart="9" bodyend="196"/>
+    <location file="src/Aegis/Services/DatabaseService.cs" line="8" column="7" bodyfile="src/Aegis/Services/DatabaseService.cs" bodystart="9" bodyend="197"/>
     <listofallmembers>
       <member refid="class_aegis_1_1_services_1_1_database_service_1abf2c9ab86c8d3d349ee76a14373100c1" prot="private" virt="non-virtual"><scope>Aegis::Services::DatabaseService</scope><name>_connectionString</name></member>
       <member refid="class_aegis_1_1_services_1_1_database_service_1aa720c5cbe9bc7aa1bbb9fb9f848797f7" prot="public" virt="non-virtual"><scope>Aegis::Services::DatabaseService</scope><name>DatabaseService</name></member>
